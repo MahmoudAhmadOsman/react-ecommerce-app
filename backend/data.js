@@ -2,8 +2,8 @@ const data = {
   products: [
     {
       _id: "1",
-      name: "Nike Slim Shirt",
-      category: "Shirts",
+      name: "Haggar",
+      category: " Khaki Flat",
       image: "/images/p1.jpg",
       price: 120.99,
       countInStock: 10,
@@ -15,8 +15,8 @@ const data = {
     },
     {
       _id: "2",
-      name: "Adidas Fit Shirt",
-      category: "Shirts",
+      name: "Wrangler",
+      category: "Jeans",
       image: "/images/p2.jpg",
       price: 100.85,
       countInStock: 20,
@@ -28,8 +28,8 @@ const data = {
     },
     {
       _id: "3",
-      name: "Lacoste Free Shirt",
-      category: "Shirts",
+      name: "Southpole",
+      category: "Jogger Fleece Pants",
       image: "/images/p3.jpg",
       price: 221.99,
       countInStock: 0,
@@ -41,8 +41,8 @@ const data = {
     },
     {
       _id: "4",
-      name: "Nike Slim Pant",
-      category: "Pants",
+      name: "Dickies",
+      category: "Work Pant",
       image: "/images/p4.jpg",
       price: 79.99,
       countInStock: 15,
@@ -54,8 +54,8 @@ const data = {
     },
     {
       _id: "5",
-      name: "Puma Slim Pant",
-      category: "Pants",
+      name: "Vineyard Vines",
+      category: "Straight Leg Pants",
       image: "/images/p5.jpg",
       price: 65.75,
       countInStock: 5,
@@ -67,8 +67,8 @@ const data = {
     },
     {
       _id: "6",
-      name: "Adidas Fit Pant",
-      category: "Pants",
+      name: "Dockers",
+      category: "Khaki Pant",
       image: "/images/p6.jpg",
       price: 139.12,
       countInStock: 12,
@@ -143,7 +143,7 @@ const data = {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
-      {
+    {
       _id: "12",
       name: "Casio XH3",
       category: "Watch",

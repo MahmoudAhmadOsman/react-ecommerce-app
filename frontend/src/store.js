@@ -10,7 +10,7 @@ const reducer = (state, action) => {
   return { products: data.products };
 };
 
-//Now add thunk to Google Crome in order to see action & state changes
+//Now add thunk for Google Chrome in order to see action & state changes
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 //3: create store, takes 2 params createStore(reducer, InitialState)

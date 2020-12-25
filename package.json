@@ -1,0 +1,29 @@
+{
+  "name": "amazing",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App]",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MahmoudAhmadOsman/react-ecommerce.git"
+  },
+  "author": "Mahmoud Osman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MahmoudAhmadOsman/react-ecommerce/issues"
+  },
+  "homepage": "https://github.com/MahmoudAhmadOsman/react-ecommerce#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-plugin-react": "^7.21.5"
+  }
+}

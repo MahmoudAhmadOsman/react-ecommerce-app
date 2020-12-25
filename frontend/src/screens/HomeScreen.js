@@ -14,7 +14,7 @@ export default function HomeScreen() {
   //Hook for Error
   const [error, setError] = useState(false);
 
-  //UseEffect(para1, para2) in this case UseEffect(()=>{},[]);
+  //UseEffect(param1, param2) in this case UseEffect(()=>{},[]);
   //Now send AJAX request to the backend and fetch products from the backend
   //step:1
   useEffect(() => {

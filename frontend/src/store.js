@@ -1,7 +1,10 @@
 ///import data from "./data";
 import { applyMiddleware, compose, createStore, combineReducers } from "redux";
 import thunk from "redux-thunk";
-import { productListReducer } from "./reducers/productReducers";
+import {
+  productDetailsReducer,
+  productListReducer,
+} from "./reducers/productReducers";
 
 //Steps: 1: InitialState, 2: reducer 3: store
 const InitialState = {};
@@ -14,6 +17,7 @@ const InitialState = {};
 //combineReducers() accepts an object
 const reducer = combineReducers({
   productList: productListReducer,
+  productDetails: productDetailsReducer,
 }); //4.=> now go the homeScreen.js and get rid off React Hooks and instead use productList from redux store
 
 //Now, add thunk for Google Chrome in order to see action & state changes

@@ -51,3 +51,4 @@ export const productDetailsReducer = (
   }
 };
 //3. Now add this function to Redux store inside store.js inside the combineReducers() function
+//Also update product screen

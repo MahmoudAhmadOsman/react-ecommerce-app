@@ -15,13 +15,14 @@ export const listProducts = () => async (dispatch) => {
     type: PRODUCT_LIST_REQUEST,
   });
 
+  //Use try and catch
   try {
-    //Now, send AJAX request to the backend using axios
+    //Now, send AJAX request to the backend using axios (/api/products) endpoint
     const { data } = await Axios.get("/api/products");
     //Now, dispatch the action to update the component to show the products
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
-      payload: data, // contains the data from the backend
+      payload: data, // contains the data stream that is coming from the backend
     });
   } catch (error) {
     dispatch({
@@ -32,9 +33,10 @@ export const listProducts = () => async (dispatch) => {
 };
 
 //2. Now create product reducer function to respond to these action {PRODUCT_LIST_FAIL, PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS}
-//inside the src folder by creating a reducers folder
+//inside the src folder by creating a [reducers] folder
 
 //2. Get product by its id from backend and update reudux based on the product it
+//=== PRODUCT DETAILS dispatch
 export const detailsProduct = (productId) => async (dispatch) => {
   dispatch({
     type: PRODUCT_DETAILS_REQUEST,
@@ -58,4 +60,4 @@ export const detailsProduct = (productId) => async (dispatch) => {
     });
   }
 };
-//3. got to productReducer and add productDetailsReducer () function
+//3. got to productReducer inside [reducers] foldeer and add productDetailsReducer () function

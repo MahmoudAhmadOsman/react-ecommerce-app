@@ -149,7 +149,7 @@ const data = {
       category: "Watch",
       image: "/images/men-s-casio-2.jpg",
       price: 219.95,
-      countInStock: 12,
+      countInStock: 82,
       brand: "Casio",
       rating: 4.9,
       numReviews: 655,

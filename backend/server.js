@@ -24,7 +24,7 @@ app.get("/api/products/:id", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Server is ready");
+  res.send(`<h2>Greate. Backend Server is ready at port:  ${port}</h2>`);
 });
 const port = process.env.PORT || 5000;
 app.listen(port, () => {

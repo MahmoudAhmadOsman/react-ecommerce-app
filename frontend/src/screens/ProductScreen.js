@@ -48,8 +48,11 @@ export default function ProductScreen(props) {
             <div className="row">
               <div className="col-md-12">
                 <Link to="/">
-                  <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                  &nbsp; Go Back
+                  <i
+                    className="fa fa-chevron-left mt-3"
+                    aria-hidden="true"
+                    title="Go back"
+                  ></i>
                 </Link>{" "}
                 <hr />
               </div>
@@ -62,6 +65,7 @@ export default function ProductScreen(props) {
                   className="img-fluid img-thumbnail"
                   src={product.image}
                   alt={product.name}
+                  draggable="false"
                 />
                 <h1>{product.name}</h1> <hr />
                 <Rating
@@ -69,7 +73,8 @@ export default function ProductScreen(props) {
                   numReviews={product.numReviews}
                 ></Rating>
                 <p>
-                  <b> Description:</b> {product.description}
+                  <b> Product Details:</b> <br />
+                  <p className="text-muted">{product.description}</p>
                 </p>
               </div>
               <div className="col-md-4">

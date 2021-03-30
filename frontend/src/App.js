@@ -9,10 +9,10 @@ function App() {
   return (
     <BrowserRouter>
       <div className="grid-container">
-        <header className="row">
+        <header className="header-row">
           <div>
             <a className="brand" href="/">
-              Amazing
+              MAO Store
             </a>
           </div>
           <div>

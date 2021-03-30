@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Rating from "./Rating";
 
 export default function Product(props) {
@@ -7,24 +8,38 @@ export default function Product(props) {
     <section className="product-main-container">
       <div className="container">
         <div className="row">
-          <div key={product._id} className="card">
-            <a href={`/product/${product._id}`}>
-              <img className="medium" src={product.image} alt={product.name} />
-            </a>
-            <div className="card-body">
+          <div className="col-md-4" key={product.id}>
+            <div className="card">
               <a href={`/product/${product._id}`}>
-                <h2>{product.name}</h2>
+                <img
+                  className="img-fluid"
+                  src={product.image}
+                  alt={product.name}
+                />
               </a>
-              {/* <p>{product.summary}</p> */}
 
-              <Rating
-                rating={product.rating}
-                numReviews={product.numReviews}
-              ></Rating>
+              <div className="card-body">
+                <h4 className="card-title">{product.name}</h4>
+                <hr />
+                <p className="card-text">
+                  <Rating
+                    rating={product.rating}
+                    numReviews={product.numReviews}
+                  ></Rating>
+                </p>
+                <button className="btn btn-outline-dark disabled">
+                  ${product.price}
+                </button>
 
-              <div className="price">${product.price}</div>
+                <Link
+                  className="btn btn-outline-info ml-1"
+                  to={`/product/${product._id}`}
+                >
+                  View
+                </Link>
+              </div>
             </div>
-          </div>{" "}
+          </div>
         </div>
       </div>
     </section>

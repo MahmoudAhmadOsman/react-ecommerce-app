@@ -8,11 +8,17 @@ export default function CartScreen(props) {
     : 1;
 
   return (
-    <div>
-      <h1>Cart Screen</h1> <hr />
-      <p>
-        ADD TO CART : ProductID: {productId} Qty: {qty}
-      </p>
-    </div>
+    <section className="cart-items">
+      <div className="container mt-3">
+        <div className="row">
+          <div className="col-md-12">
+            <h1 className="text-danger">Cart Screen: Coming Soon!</h1> <hr />
+            <p>
+              ADD TO CART : ProductID: {productId} Qty: {qty}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

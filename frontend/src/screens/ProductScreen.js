@@ -67,14 +67,20 @@ export default function ProductScreen(props) {
                   alt={product.name}
                   draggable="false"
                 />
-                <h1>{product.name}</h1> <hr />
+                <h1>{product.name}</h1>
+                <p className="brand-name">
+                  Brand: <span className="text-muted">{product.brand}</span>
+                </p>
+                <hr />
                 <Rating
                   rating={product.rating}
                   numReviews={product.numReviews}
                 ></Rating>
+                <p className="product-title">
+                  <b> Product Details:</b>
+                </p>
                 <p>
-                  <b> Product Details:</b> <br />
-                  <p className="text-muted">{product.description}</p>
+                  <p className="product-description">{product.description}</p>
                 </p>
               </div>
               <div className="col-md-4">

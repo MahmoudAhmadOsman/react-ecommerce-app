@@ -31,20 +31,21 @@ const data = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
     {
-      id: "3",
+      _id: "3",
       name: "Southpole",
       category: "Jogger Fleece Pants",
       image: "https://source.unsplash.com/1600x900/?pants",
-      price: 221.99,
+      price: 49.99,
       countInStock: 0,
       brand: "Lacoste",
       rating: 4.8,
-      numReviews: 170,
+      numReviews: 180,
       summary:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
+
     {
       _id: "4",
       name: "Dickies",

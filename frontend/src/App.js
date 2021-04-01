@@ -28,6 +28,7 @@ function App() {
                 <span class="badge bg-danger">{cartItems.length}</span>
               )}
             </Link>
+            <Link to="/register">Register</Link>
             <Link to="/signin">Sign In</Link>
           </div>
         </header>

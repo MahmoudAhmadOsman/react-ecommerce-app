@@ -31,7 +31,7 @@ export default function ProductScreen(props) {
     dispatch(detailsProduct(productId));
   }, [dispatch, productId]);
 
-  //Add to Cart
+  //Add to Cart button action
   const addToCartHandler = () => {
     props.history.push(`/cart/${productId}?qty=${qty}`);
   };
@@ -41,7 +41,9 @@ export default function ProductScreen(props) {
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
-        <MessageBox variant="danger">{error}</MessageBox>
+        <MessageBox variant="danger" className="text-center">
+          {error}
+        </MessageBox>
       ) : (
         <div className="product-container">
           <div className="container">
@@ -83,7 +85,7 @@ export default function ProductScreen(props) {
                   <p className="product-description">{product.description}</p>
                 </p>
               </div>
-              <div className="col-md-4">
+              <div className="col-md-3">
                 <h1>
                   <b className="text-danger">${product.price}</b>
                 </h1>
@@ -105,15 +107,22 @@ export default function ProductScreen(props) {
                 )}
               </div> */}
 
-              <div className="col-md-2">
+              <div className="col-md-3">
                 <ul className="list-group">
                   {product.countInStock > 0 && (
-                    <>
+                    <div
+                      style={{
+                        border: "1px solid #ccc",
+                        height: "290px",
+                        backgroundColor: "#fafafa",
+                        padding: "20px",
+                      }}
+                    >
                       <div>
                         <h1 className="text-info">Qty</h1>
                         <div>
                           <select
-                            className="form-control"
+                            className="form-control mb-5"
                             value={qty}
                             onChange={(e) => setQty(e.target.value)}
                           >
@@ -130,11 +139,11 @@ export default function ProductScreen(props) {
 
                       <button
                         onClick={addToCartHandler}
-                        className="btn btn-outline-warning btn-lg mt-4"
+                        className="btn btn-outline-danger btn-block btn-lg mt-4"
                       >
                         <h3 className="font-weight-bold"> Add to Cart</h3>
                       </button>
-                    </>
+                    </div>
                   )}
                 </ul>
               </div>

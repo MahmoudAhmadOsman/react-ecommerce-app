@@ -25,7 +25,7 @@ export default function HomeScreen() {
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
-        <MessageBox variant="danger">{error}</MessageBox>
+        <MessageBox variant="danger text-center mt-4">{error}</MessageBox>
       ) : (
         <>
           <Product products={products}></Product>

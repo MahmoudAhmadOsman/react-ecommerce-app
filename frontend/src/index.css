@@ -62,7 +62,20 @@ a.brand {
   justify-content: space-between;
   align-items: center;
 }
+.header-row a:hover{
+  color: #fff;
+  text-decoration: none;
+}
 
+.header-row span.bg-danger{
+  font-size:13px;
+}
+.header-row .bg-danger {
+  position: absolute;
+  top: 0;
+ 
+  border-radius:50%
+}
 
 /* All Products style */
 .product-main-container {

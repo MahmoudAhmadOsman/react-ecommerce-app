@@ -14,18 +14,18 @@ export default function Product(props) {
           {products.map((product) => (
             <div className="col-md-4" key={product.id}>
               <div className="card">
-                <a href={`/product/${product._id}`}>
+                <Link to={`/product/${product._id}`}>
                   <img
                     className="img-fluid"
                     src={product.image}
                     alt={product.name}
                   />
-                </a>
+                </Link>
 
                 <div className="card-body">
                   <h4 className="card-title">{product.name}</h4>
                   <p className="brand-name">
-                    Brand: <span className="text-muted">{product.brand}</span>{" "}
+                    Brand: <span className="text-muted">{product.brand}</span>
                   </p>
                   <hr />
                   <p className="card-text">

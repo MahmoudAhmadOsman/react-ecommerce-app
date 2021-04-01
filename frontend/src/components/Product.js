@@ -19,6 +19,7 @@ export default function Product(props) {
                     className="img-fluid"
                     src={product.image}
                     alt={product.name}
+                    draggable="false"
                   />
                 </Link>
 

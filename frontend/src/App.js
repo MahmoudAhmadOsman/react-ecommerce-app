@@ -4,6 +4,8 @@ import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import Footer from "./footer/Footer";
 import CartScreen from "./screens/CartScreen";
+import Login from "./screens/Login";
+
 import { useSelector } from "react-redux";
 
 function App() {
@@ -29,10 +31,11 @@ function App() {
               )}
             </Link>
             <Link to="/register">Register</Link>
-            <Link to="/signin">Sign In</Link>
+            <Link to="/login">Sign In</Link>
           </div>
         </header>
         <main>
+          <Route path="/login" component={Login}></Route>
           <Route path="/cart/:id?" component={CartScreen}></Route>
           <Route path="/product/:id" component={ProductScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>

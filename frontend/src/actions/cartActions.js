@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CART_ADD_ITEM } from "../constants/cartConstants";
+import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
 
 //dispatch, getState: are function in redux
 export const addToCart = (productId, qty) => async (dispatch, getState) => {
@@ -22,3 +22,10 @@ export const addToCart = (productId, qty) => async (dispatch, getState) => {
   localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
 };
 //4th. create a reducer
+
+//REMOVE FROM CART ITEMS
+
+export const removeFromCart = (productId) => (dispatch, getState) => {
+  dispatch({ type: CART_REMOVE_ITEM, payload: productId });
+  localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
+};

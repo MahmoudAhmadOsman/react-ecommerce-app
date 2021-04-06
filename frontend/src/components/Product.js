@@ -12,7 +12,7 @@ export default function Product(props) {
         <h1 className="text-danger">{productListTitle}</h1> <hr />
         <div className="row">
           {products.map((product) => (
-            <div className="col-md-3 mb-3" key={product._id}>
+            <div className="col-md-4 mb-3" key={product._id}>
               <div className="card">
                 <Link to={`/product/${product._id}`}>
                   <img

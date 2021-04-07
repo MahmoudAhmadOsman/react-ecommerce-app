@@ -13,9 +13,9 @@ function Login() {
       <div className="container">
         <div className="row">
           <div className="col-md-6 mx-auto">
-            <form action="" method="POST">
+            <form action="#" method="POST">
               <div className="form-group">
-                <label htmlFor="">User Name</label>
+                <label htmlFor="username">User Name</label>
                 <input
                   type="text"
                   className="form-control form-control-lg"
@@ -24,7 +24,7 @@ function Login() {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="">Password</label>
+                <label htmlFor="password">Password</label>
                 <input
                   type="password"
                   className="form-control form-control-lg"

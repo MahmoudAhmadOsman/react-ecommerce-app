@@ -152,12 +152,34 @@ a.brand {
   margin-right: 8px;
 }
 
- 
+
 /* Login */
 
 .login {
-  position: relative;
+  max-width: 650px;
+  height: 550px;
+  background-color: #f6f6f6;
+  margin: 0 auto;
+  padding: 10px 15px;
+}
 
+.login input {
+  border: 0px;
+  background-color: #eee;
+}
+
+/* Register */
+.register {
+  max-width: 650px;
+  height: 550px;
+  background-color: #f6f6f6;
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+.register input {
+  border: 0px;
+  background-color: #eee;
 }
 
 /*Product not found*/

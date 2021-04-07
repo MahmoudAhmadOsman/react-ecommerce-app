@@ -36,7 +36,7 @@ app.get("/api/products/:id", (req, res) => {
 app.use("/api/users", userRouter);
 
 app.get("/", (req, res) => {
-  res.send(`<h2>Greate. Backend Server is ready at port:  ${port}</h2>`);
+  res.send(`<h2>Great!. Backend Server is ready at port:  ${port}</h2>`);
 });
 
 //Show all errors - server errors

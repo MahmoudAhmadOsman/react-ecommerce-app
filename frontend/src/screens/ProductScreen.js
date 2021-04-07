@@ -5,6 +5,7 @@ import { detailsProduct } from "../actions/productActions";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import Rating from "../components/Rating";
+import currencyFormat from "../utils/util";
 
 //import data from "../data";
 
@@ -87,7 +88,7 @@ export default function ProductScreen(props) {
               </div>
               <div className="col-md-3">
                 <h1>
-                  <b className="text-danger">${product.price}</b>
+                  <b className="text-danger">{currencyFormat(product.price)}</b>
                 </h1>
                 <p>
                   <b className="text-info">Status: </b>

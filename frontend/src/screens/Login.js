@@ -2,19 +2,39 @@ import React from "react";
 
 function Login() {
   return (
-    <section classname="login">
-      <div classname="container">
-        <h1 classname="text-danger">Sign In</h1>
+    <section className="login mt-3">
+      <div className="container">
         <div className="row">
-          <div className="col-md-6">
-            <form action="">
-              <div class="form-group">
-                <label htmlFor="name">User Name</label>
+          <div className="col-md-6 mx-auto">
+            <h1 className="text-danger">Login</h1> <hr />
+          </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6 mx-auto">
+            <form action="" method="POST">
+              <div className="form-group">
+                <label htmlFor="">User Name</label>
                 <input
                   type="text"
-                  className="form-control"
-                  placeholder="Enter your user name"
+                  className="form-control form-control-lg"
+                  placeholder="Enter your username"
+                  require
                 />
+              </div>
+              <div className="form-group">
+                <label htmlFor="">Password</label>
+                <input
+                  type="password"
+                  className="form-control form-control-lg"
+                  placeholder="Enter your password"
+                  require
+                />
+              </div>
+
+              <div className="form-group">
+                <button className="btn btn-outline-danger btn-lg">LOGIN</button>
               </div>
             </form>
           </div>

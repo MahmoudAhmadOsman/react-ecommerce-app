@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 
 import MessageBox from "../components/MessageBox";
+import currencyFormat from "../utils/util";
 
 export default function CartScreen(props) {
   //Read the cart id here
@@ -45,8 +46,10 @@ export default function CartScreen(props) {
     <section className="cart-items">
       <div className="container mt-3">
         <div className="shopping-bag">
-          <i className="fa fa-shopping-cart"></i>
-          <h1 className="text-danger">Shopping Cart</h1> <hr />
+          {/* <i className="fa fa-shopping-cart"></i> */}
+          <h1 className="text-danger">Shopping Cart</h1>
+
+          <hr />
         </div>
         {cartItems.length === 0 ? (
           <MessageBox>
@@ -68,7 +71,9 @@ export default function CartScreen(props) {
                   <Link to={`/product/${item.product}`}>
                     <h1>{item.name}</h1>
                   </Link>
-                  <small className="text-muted">${item.price}</small>
+                  <small className="text-muted">
+                    {currencyFormat(item.price)}
+                  </small>
                 </div>
                 <div className="col">
                   <select

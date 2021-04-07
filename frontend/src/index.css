@@ -26,7 +26,7 @@ body {
   height: 100%;
 } */
 
- 
+
 header {
   /* grid-area: header; */
   background-color: #203040;
@@ -135,11 +135,11 @@ a.brand {
   position: relative;
 }
 
-.cart-items .shopping-bag {
+/* .cart-items .shopping-bag {
   display: flex;
   margin-bottom: 40px;
 
-}
+} */
 
 .cart-items .shopping-bag .fa-shopping-cart {
   width: 45px;
@@ -152,7 +152,7 @@ a.brand {
   margin-right: 8px;
 }
 
-
+ 
 /* Login */
 
 .login {
@@ -198,7 +198,7 @@ footer {
   margin: 35% auto 0px 0px;
   right: 0;
   left: 0;
-  
+
 
 }
 

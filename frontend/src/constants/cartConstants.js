@@ -1,4 +1,4 @@
 export const CART_ADD_ITEM = "CART_ADD_ITEM";
 //nxt create actions for CART_ADD_ITEM
 
-export const CART_REMOVE_ITEM = "CART_REMOVE_IT";
+export const CART_REMOVE_ITEM = "CART_REMOVE_ITEM";

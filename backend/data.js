@@ -24,8 +24,6 @@ const data = {
       brand: "Nike",
       rating: 4.5,
       numReviews: 160,
-      summary:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
@@ -38,8 +36,6 @@ const data = {
       brand: "Adidas",
       rating: 4.0,
       numReviews: 210,
-      summary:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
@@ -52,8 +48,6 @@ const data = {
       brand: "Lacoste",
       rating: 4.8,
       numReviews: 180,
-      summary:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },

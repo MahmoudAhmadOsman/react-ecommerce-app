@@ -16,7 +16,6 @@ const data = {
   ],
   products: [
     {
-      _id: "1",
       name: "Haggar",
       category: " Khaki Flat",
       image: "https://source.unsplash.com/1600x900/?watch",
@@ -31,7 +30,6 @@ const data = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
     {
-      _id: "2",
       name: "Wrangler",
       category: "Jeans",
       image: "https://source.unsplash.com/1600x900/?pants",
@@ -46,7 +44,6 @@ const data = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
     {
-      _id: "3",
       name: "Southpole",
       category: "Jogger Fleece Pants",
       image: "https://source.unsplash.com/1600x900/?pants",
@@ -62,7 +59,6 @@ const data = {
     },
 
     {
-      _id: "4",
       name: "Dickies",
       category: "Work Pant",
       image: "https://source.unsplash.com/1600x900/?pants",
@@ -75,7 +71,6 @@ const data = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
     {
-      _id: "5",
       name: "Vineyard Vines",
       category: "Straight Leg Pants",
       image: "https://source.unsplash.com/1600x900/?pants",
@@ -88,7 +83,6 @@ const data = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
     {
-      _id: "6",
       name: "Dockers",
       category: "Khaki Pant",
       image: "https://source.unsplash.com/1600x900/?jeans",
@@ -101,7 +95,6 @@ const data = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
     {
-      _id: "7",
       name: "Casio FX",
       category: "Watch",
       image: "https://source.unsplash.com/1600x900/?casio",
@@ -114,7 +107,6 @@ const data = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
     {
-      _id: "8",
       name: "Casio WCS",
       category: "Watch",
       image: "https://source.unsplash.com/1600x900/?watch",
@@ -127,7 +119,6 @@ const data = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
     {
-      _id: "9",
       name: "Casio PX",
       category: "Watch",
       image: "https://source.unsplash.com/1600x900/?watch",
@@ -140,7 +131,6 @@ const data = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
     {
-      _id: "10",
       name: "Casio XH3",
       category: "Watch",
       image: "https://source.unsplash.com/1600x900/?watch",
@@ -153,7 +143,6 @@ const data = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
     {
-      _id: "11",
       name: "Casio FX9",
       category: "Watch",
       image: "https://source.unsplash.com/1600x900/?perfume",
@@ -166,7 +155,6 @@ const data = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet",
     },
     {
-      _id: "12",
       name: "Casio XH3",
       category: "Watch",
       image: "https://source.unsplash.com/1600x900/?watch",

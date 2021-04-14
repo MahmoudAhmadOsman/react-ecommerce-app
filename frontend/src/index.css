@@ -165,7 +165,7 @@ a.brand {
 
 .login input {
   border: 0px;
-  background-color: #eee;
+  background-color: rgb(255, 255, 255);
 }
 
 /* Register */
@@ -179,7 +179,7 @@ a.brand {
 
 .register input {
   border: 0px;
-  background-color: #eee;
+  background-color: rgb(255, 255, 255);
 }
 
 /*Product not found*/
@@ -196,31 +196,17 @@ a.brand {
 footer {
   /* grid-area: footer; */
   width: 100%;
-  height: 50px;
-  height: auto;
-
-  background-color: #203040;
-  color: #999;
-  text-align: center;
-  font-size: 12px;
+  height: 50px; 
   line-height: 50px;
-  padding: 0px;
-  /* margin: 100% auto; */
-  position: absolute;
-  /* grid-area: footer; */
-  width: 100%;
-  height: 50px;
-  background-color: #203040;
   color: #999;
-  text-align: center;
   font-size: 12px;
-  line-height: 50px;
   padding: 0px;
-  position: absolute;
-  margin: 35% auto 0px 0px;
+  background-color: #203040;
+  text-align: center;
+  /* position: absolute;  
   right: 0;
-  left: 0;
-
+  left: 0; */
+  margin: 35% auto;
 
 }
 

@@ -168,6 +168,11 @@ a.brand {
 .login input {
   border: 0px;
   background-color: rgb(255, 255, 255);
+
+}
+
+.login button.btn-outline-danger {
+  border-radius: 50px;
 }
 
 .login:before {
@@ -207,6 +212,10 @@ a.brand {
   left: 0;
   right: 0;
   background-image: linear-gradient(to right, #9a3f3f 20%, #479842 20%, #479842 75%, #479842 75%, #737373 100%);
+}
+
+.register button.btn-outline-danger {
+  border-radius: 50px;
 }
 
 /*Product not found*/

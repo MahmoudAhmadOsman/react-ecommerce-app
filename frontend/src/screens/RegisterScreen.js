@@ -46,7 +46,7 @@ function RegisterScreen() {
               </div>
 
               <div className="form-group">
-                <button className="btn btn-outline-danger btn-lg">
+                <button className="btn btn-outline-danger btn-block btn-lg">
                   REGISTER
                 </button>
               </div>

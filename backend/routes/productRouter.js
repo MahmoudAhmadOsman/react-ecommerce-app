@@ -16,7 +16,7 @@ productRouter.get(
 productRouter.get(
   "/seed",
   expressAsyncHandler(async (req, res) => {
-    // await Product.remove({}); // remove product in the database in order to create new products
+    //await Product.remove({}); // remove product in the database in order to create new products
     const createdProducts = await Product.insertMany(data.products);
     res.send({ createdProducts });
   })

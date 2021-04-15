@@ -34,7 +34,7 @@ function Login() {
               </div>
 
               <div className="form-group">
-                <button className="btn btn-outline-danger btn-lg">LOGIN</button>
+                <button className="btn btn-outline-danger btn-block btn-lg">LOGIN</button>
               </div>
             </form>
           </div>

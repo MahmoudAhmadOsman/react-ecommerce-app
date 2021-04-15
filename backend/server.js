@@ -1,11 +1,15 @@
 import express from "express";
 import mongoose from "mongoose";
-// import data from "./data.js";
+import dotenv from "dotenv";
 
 import userRouter from "./routes/userRouter.js";
 import productRouter from "./routes/productRouter.js";
 
+dotenv.config();
+
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //Database Connection
 mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/mongodb2020", {

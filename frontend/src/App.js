@@ -32,12 +32,12 @@ function App() {
               )}
             </Link>
             <Link to="/register">Register</Link>
-            <Link to="/login">Sign In</Link>
+            <Link to="/signin">Sign In</Link>
           </div>
         </header>
         <main>
           <Route path="/register" component={RegisterScreen}></Route>
-          <Route path="/login" component={LoginScreen}></Route>
+          <Route path="/signin" component={LoginScreen}></Route>
           <Route path="/cart/:id?" component={CartScreen}></Route>
           <Route path="/product/:id" component={ProductScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>

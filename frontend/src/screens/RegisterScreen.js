@@ -8,7 +8,8 @@ function RegisterScreen() {
         <div className="container">
           <div className="row">
             <div className="col-md-6 mx-auto">
-              <h1 className="text-danger">Register</h1> <hr />
+              <h2 className="text-danger">Register & Create an Account</h2>{" "}
+              <hr />
             </div>
           </div>
         </div>

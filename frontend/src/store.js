@@ -29,7 +29,8 @@ const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
   cart: cartReducer, // for cart Reducer
-  userSignin: userSigninReducer, // then use this i LoginScreen.js inside the submitHandler() function
+  userSignin: userSigninReducer, // then use this LoginScreen.js inside the submitHandler() function
+  //keys here are: [productList, productDetails, cart, userSignin] - use these keys you will have access to the redux store
 }); //4.=> now go the homeScreen.js and get rid off React Hooks and instead use productList from redux store
 
 //Now, add thunk for Google Chrome in order to see action & state changes

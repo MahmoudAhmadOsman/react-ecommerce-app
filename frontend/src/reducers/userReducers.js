@@ -12,9 +12,15 @@ export const userSigninReducer = (state = {}, action) => {
     case USER_SIGNIN_REQUEST:
       return { loading: true };
     case USER_SIGNIN_SUCCESS:
-      return { loading: false, userInfo: action.payload };
+      return {
+        loading: false,
+        userInfo: action.payload,
+      };
     case USER_SIGNIN_FAIL:
-      return { loading: false, error: action.payload };
+      return {
+        loading: false,
+        error: action.payload,
+      };
     case USER_SIGNOUT:
       return {};
     default:
@@ -22,4 +28,4 @@ export const userSigninReducer = (state = {}, action) => {
   }
 };
 
-//next add this reducer to store
+//3. next add this reducer to store in the combin reducers

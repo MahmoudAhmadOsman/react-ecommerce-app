@@ -20,7 +20,7 @@ export const signin = (email, password) => async (dispatch) => {
       type: USER_SIGNIN_SUCCESS,
       payload: data,
     });
-    //then save the data into the localStorage
+    //then save the data into  localStorage
     //localStorage.setItem("isthekey", JSON.stringify(data));
     localStorage.setItem("userInfo", JSON.stringify(data));
   } catch (error) {
@@ -48,4 +48,4 @@ export const signout = () => (dispatch) => {
   //Then use this action in App.js sign out
 };
 
-//next create userReducer
+//2. next create userReducer

@@ -27,7 +27,6 @@ const Login = (props) => {
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
-
     // use signin dispatch action
     dispatch(signin(email, password));
   };

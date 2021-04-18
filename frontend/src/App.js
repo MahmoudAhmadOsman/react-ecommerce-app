@@ -1,18 +1,30 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import Footer from "./footer/Footer";
 import CartScreen from "./screens/CartScreen";
 import LoginScreen from "./screens/LoginScreen";
+import { signout } from "./actions/userActions";
 
-import { useSelector } from "react-redux";
 import RegisterScreen from "./screens/RegisterScreen";
 
 function App() {
   // Add cart badge - get it from redux by using useSelector which will bring the cart from redux
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+
+  //Get the loged in user from Redux
+  const userSignin = useSelector((state) => state.userSignin);
+  //Then get user info from usersign
+  const { userInfo } = userSignin; // then use userInfo in signin conditionally
+
+  //User Signout function
+  const dispatch = useDispatch();
+  const signoutHandler = () => {
+    dispatch(signout());
+  };
 
   return (
     <BrowserRouter>
@@ -32,14 +44,32 @@ function App() {
               )}
             </Link>
             <Link to="/register">Register</Link>
-            <Link to="/signin">Sign In</Link>
+            {/* Conditional rendering for sign in */}
+
+            {userInfo ? (
+              <div className="dropdown">
+                <Link to="#">
+                  {userInfo.name}
+                  <i className="fa fa-caret-down"></i>{" "}
+                </Link>
+                <ul className="dropdown-content">
+                  <li>
+                    <Link to="#signout" onClick={signoutHandler}>
+                      Sign Out
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <Link to="/signin">Sign In</Link>
+            )}
           </div>
         </header>
         <main>
-          <Route path="/register" component={RegisterScreen}></Route>
-          <Route path="/signin" component={LoginScreen}></Route>
           <Route path="/cart/:id?" component={CartScreen}></Route>
           <Route path="/product/:id" component={ProductScreen}></Route>
+          <Route path="/register" component={RegisterScreen}></Route>
+          <Route path="/signin" component={LoginScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <Footer />

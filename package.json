@@ -6,7 +6,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
+    "dev": "concurrently -n 'server,client' -c 'red,green'  \"cd backend && npm start \" \"cd frontend && npm start \""
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,7 @@
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.3",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.7"
   },
   "devDependencies": {
     "eslint": "^7.16.0",

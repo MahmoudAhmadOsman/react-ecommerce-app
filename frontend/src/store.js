@@ -6,6 +6,7 @@ import {
   productDetailsReducer,
   productListReducer,
 } from "./reducers/productReducers";
+import { userSigninReducer } from "./reducers/userReducers";
 
 //Steps: 1: InitialState, 2: reducer 3: store
 const InitialState = {
@@ -28,6 +29,7 @@ const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
   cart: cartReducer, // for cart Reducer
+  userSignin: userSigninReducer, // then use this i LoginScreen.js inside the submitHandler() function
 }); //4.=> now go the homeScreen.js and get rid off React Hooks and instead use productList from redux store
 
 //Now, add thunk for Google Chrome in order to see action & state changes
@@ -37,6 +39,7 @@ const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   reducer,
   InitialState,
+
   //compose(applyMiddleware(thunk))
   composeEnhancer(applyMiddleware(thunk))
 );

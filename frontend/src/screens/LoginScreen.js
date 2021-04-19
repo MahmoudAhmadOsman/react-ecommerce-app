@@ -5,20 +5,16 @@ import { signin } from "../actions/userActions";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 
-
 //You have props from redux store actions
 const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-
   //After login redirect the user to sh page
   const redirect = props.location.search
     ? props.location.search.split("=")[1]
     : "/";
-  
-  
-  
+
   //Get the logged in user from Redux by using useSelector HOOK
   const userSignin = useSelector((state) => state.userSignin);
   //Then get user info from the usersign function
@@ -30,7 +26,6 @@ const Login = (props) => {
     // use signin dispatch action
     dispatch(signin(email, password));
   };
-
 
   //Get user info
   useEffect(() => {
@@ -83,7 +78,9 @@ const Login = (props) => {
                   </button>
                   <small className="create-new-account">
                     Don't have an account yet?{" "}
-                    <Link to="/register">Create account</Link>{" "}
+                    <Link to={`/register?redirect=${redirect}`}>
+                      Create account
+                    </Link>{" "}
                   </small>
                 </div>
               </form>

@@ -43,7 +43,7 @@ function App() {
                 <span className="badge bg-danger">{cartItems.length}</span>
               )}
             </Link>
-            <Link to="/register">Register</Link>
+            {/* <Link to="/register">Register</Link> */}
             {/* Conditional rendering for sign in */}
 
             {userInfo ? (
@@ -68,8 +68,8 @@ function App() {
         <main>
           <Route path="/cart/:id?" component={CartScreen}></Route>
           <Route path="/product/:id" component={ProductScreen}></Route>
+          <Route path="/signin" component={LoginScreen}></Route>{" "}
           <Route path="/register" component={RegisterScreen}></Route>
-          <Route path="/signin" component={LoginScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <Footer />

@@ -39,7 +39,33 @@ userRouter.post(
       }
     }
     //If user doesnt exist or user email or password in incorrect
-    res.status(401).send({ message: "Wrong email or password" });
+    res.status(401).send({ message: "Wrong email or password!" });
   })
 );
+
+//Registeration router
+
+userRouter.post(
+  "/register",
+  expressAsyncHandler(async (req, res) => {
+    //Create new user
+    const user = new User({
+      name: req.body.name,
+      email: req.body.email,
+      password: bcrypt.hashSync(req.body.password, 10),
+    });
+
+    //Save the user to the database
+    const createdUser = await user.save();
+    //Now send the data to the backend
+    res.send({
+      _id: createdUser._id,
+      name: createdUser.name,
+      email: createdUser.email,
+      isAdmin: createdUser.isAdmin,
+      token: generateToken(createdUser),
+    });
+  })
+);
+
 export default userRouter;

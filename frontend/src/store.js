@@ -6,11 +6,21 @@ import {
   productDetailsReducer,
   productListReducer,
 } from "./reducers/productReducers";
-import { userSigninReducer } from "./reducers/userReducers";
+import {
+  userRegisterReducer,
+  userSigninReducer,
+} from "./reducers/userReducers";
 
 //Steps: 1: InitialState, 2: reducer 3: store
 const InitialState = {
-  //Read the cart item in localStorage and check
+  //Save Signin user info into the localStorage & keep the user logged even after page refresh
+  userSignin: {
+    userInfo: localStorage.getItem("userInfo")
+      ? JSON.parse(localStorage.getItem("userInfo"))
+      : null,
+  },
+
+  //Save  cart item in localStorage & keep the user logged even after page refresh
   cart: {
     cartItems: localStorage.getItem("cartItems")
       ? JSON.parse(localStorage.getItem("cartItems"))
@@ -31,6 +41,7 @@ const reducer = combineReducers({
   cart: cartReducer, // for cart Reducer
   userSignin: userSigninReducer, // then use this LoginScreen.js inside the submitHandler() function
   //keys here are: [productList, productDetails, cart, userSignin] - use these keys you will have access to the redux store
+  userRegister: userRegisterReducer,
 }); //4.=> now go the homeScreen.js and get rid off React Hooks and instead use productList from redux store
 
 //Now, add thunk for Google Chrome in order to see action & state changes

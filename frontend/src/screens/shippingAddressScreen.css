@@ -1,0 +1,15 @@
+.shipping-container {
+    position: relative;
+}
+
+.shipping-container h1 {
+    color: #666;
+}
+
+.shipping-container label {
+    font-size: 17px;
+    font-weight: bold;
+    color: #666;
+}
+
+ 

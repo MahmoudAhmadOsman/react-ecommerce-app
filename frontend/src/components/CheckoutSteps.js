@@ -2,7 +2,7 @@ import React from "react";
 
 const CheckoutSteps = (props) => {
   return (
-    <section className="checkout-main-steps">
+    <section className="checkout-main-steps container">
       <div className="row checkout-steps">
         <div className={props.step1 ? "active" : ""}>Sign In</div>
         <div className={props.step2 ? "active" : ""}>Shipping</div>

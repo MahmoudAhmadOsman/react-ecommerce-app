@@ -10,7 +10,7 @@ const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  //After login redirect the user to sh page
+  //After login redirect the user to the home page
   const redirect = props.location.search
     ? props.location.search.split("=")[1]
     : "/";

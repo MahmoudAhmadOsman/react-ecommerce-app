@@ -12,7 +12,7 @@ const RegisterScreen = (props) => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  //After RegisterScreen redirect the user to sh page
+  //After RegisterScreen redirect the user to the home page
   const redirect = props.location.search
     ? props.location.search.split("=")[1]
     : "/";
@@ -98,7 +98,7 @@ const RegisterScreen = (props) => {
                 {/* Confirm password */}
 
                 <div className="form-group">
-                  <label htmlFor="confirmPassword">Confim Password</label>
+                  <label htmlFor="confirmPassword">Confirm Password</label>
                   <input
                     type="password"
                     className="form-control form-control-lg"

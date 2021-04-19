@@ -9,7 +9,7 @@ import currencyFormat from "../utils/util";
 
 //import data from "../data";
 
-export default function ProductScreen(props) {
+const ProductScreen = (props) => {
   const dispatch = useDispatch();
   //Find product by its id
   // const product = data.products.find((x) => x._id === props.match.params.id); //old, static
@@ -154,4 +154,5 @@ export default function ProductScreen(props) {
       )}
     </section>
   );
-}
+};
+export default ProductScreen;

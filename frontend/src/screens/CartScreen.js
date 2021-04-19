@@ -6,7 +6,7 @@ import { addToCart, removeFromCart } from "../actions/cartActions";
 import MessageBox from "../components/MessageBox";
 import currencyFormat from "../utils/util";
 
-export default function CartScreen(props) {
+const CartScreen = (props) => {
   //Read the cart id here
 
   const productId = props.match.params.id;
@@ -125,4 +125,6 @@ export default function CartScreen(props) {
       </div>
     </section>
   );
-}
+};
+
+export default CartScreen;

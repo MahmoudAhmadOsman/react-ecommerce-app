@@ -10,7 +10,7 @@ import { signout } from "./actions/userActions";
 
 import RegisterScreen from "./screens/RegisterScreen";
 
-function App() {
+const App = () => {
   // Add cart badge - get it from redux by using useSelector which will bring the cart from redux
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
@@ -76,6 +76,6 @@ function App() {
       </div>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

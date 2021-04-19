@@ -211,9 +211,11 @@ a.brand {
   margin-top: 0.4rem;
   border-radius: 0.5rem;
 }
-ul.dropdown-content  li{
-  list-style-type:none;
+
+ul.dropdown-content li {
+  list-style-type: none;
 }
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -279,24 +281,48 @@ ul.dropdown-content  li{
 
 
 
-/* Footer Styles */
-footer {
-  /* grid-area: footer; */
-  width: 100%;
-  height: auto;
- 
-  color: #999;
-  font-size: 12px;
-  padding: 15px 0px 0px 0px;
-  background-color: #203040;
-  text-align: center;
-  position: absolute;
-  right: 0;
-  left: 0;
-  margin: 25% auto 100% auto;
+
+/* Checkout Steps */
+.checkout-steps {
+  position: relative;
+  margin-top:60px;
+}
+.checkout-steps>div {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.checkout-steps>div.active {
+  border-top-color: #f08000;
+  color: #f08000;
 
 }
 
-footer p a {
-  color: #f0c040;
-}
+
+
+
+
+  /* Footer Styles */
+  footer {
+    /* grid-area: footer; */
+    width: 100%;
+    height: auto;
+
+    color: #999;
+    font-size: 12px;
+    padding: 15px 0px 0px 0px;
+    background-color: #203040;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 25% auto 100% auto;
+
+  }
+
+  footer p a {
+    color: #f0c040;
+  }

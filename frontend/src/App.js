@@ -9,6 +9,7 @@ import LoginScreen from "./screens/LoginScreen";
 import { signout } from "./actions/userActions";
 
 import RegisterScreen from "./screens/RegisterScreen";
+import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 
 const App = () => {
   // Add cart badge - get it from redux by using useSelector which will bring the cart from redux
@@ -70,6 +71,7 @@ const App = () => {
           <Route path="/product/:id" component={ProductScreen}></Route>
           <Route path="/signin" component={LoginScreen}></Route>{" "}
           <Route path="/register" component={RegisterScreen}></Route>
+          <Route path="/shipping" component={ShippingAddressScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <Footer />

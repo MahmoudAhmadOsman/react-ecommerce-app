@@ -20,11 +20,16 @@ const InitialState = {
       : null,
   },
 
-  //Save  cart item in localStorage & keep the user logged even after page refresh
+  //Save  cart item into localStorage & keep the user logged even after page refresh
   cart: {
     cartItems: localStorage.getItem("cartItems")
       ? JSON.parse(localStorage.getItem("cartItems"))
       : [],
+
+    //Save the Shipping address into localStorage
+    shippingAddress: localStorage.getItem("shippingAddress")
+      ? JSON.parse(localStorage.getItem("shippingAddress"))
+      : {},
   },
 };
 

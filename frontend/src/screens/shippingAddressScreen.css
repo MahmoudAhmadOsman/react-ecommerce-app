@@ -1,5 +1,8 @@
 .shipping-container {
+    width: 100%;
     position: relative;
+    background-color: #fff;
+    height:100vh;
 }
 
 .shipping-container h1 {

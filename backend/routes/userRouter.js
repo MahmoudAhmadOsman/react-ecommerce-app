@@ -57,7 +57,7 @@ userRouter.post(
 
     //Save the user to the database
     const createdUser = await user.save();
-    //Now send the data to the backend
+    //Now, send the data to the backend
     res.send({
       _id: createdUser._id,
       name: createdUser.name,

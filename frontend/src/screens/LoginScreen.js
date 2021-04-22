@@ -56,7 +56,7 @@ const Login = (props) => {
                     className="form-control form-control-lg"
                     placeholder="Enter your email address"
                     id="email"
-                    require
+                    required
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
@@ -67,7 +67,7 @@ const Login = (props) => {
                     className="form-control form-control-lg"
                     placeholder="Enter your password"
                     id="password"
-                    require
+                    required
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>

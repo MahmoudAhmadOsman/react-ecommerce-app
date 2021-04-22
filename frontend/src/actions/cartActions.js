@@ -1,6 +1,11 @@
 import axios from "axios";
-import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
-import { CART_SAVE_SHIPPING_ADDRESS } from "../constants/userConstants";
+
+import {
+  CART_ADD_ITEM,
+  CART_PAYMENT_METHOD,
+  CART_REMOVE_ITEM,
+  CART_SAVE_SHIPPING_ADDRESS,
+} from "../constants/cartConstants";
 
 //dispatch, getState: are function in redux
 export const addToCart = (productId, qty) => async (dispatch, getState) => {
@@ -33,12 +38,22 @@ export const removeFromCart = (productId) => (dispatch, getState) => {
   localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
 };
 
-//Shipping Action
+//Shipping Address Action
+
 export const saveShippingAddress = (data) => (dispatch) => {
   dispatch({
     type: CART_SAVE_SHIPPING_ADDRESS,
     payload: data,
   });
-  //Save the data into localStorage and convert data into json object
-  localStorage.setItem("shippindAddress", JSON.stringify(data));
+  //Save shippingAddress  data into localStorage and convert data into json object
+  localStorage.setItem("shippingAddress", JSON.stringify(data));
+};
+
+//Save  Payment Method Action
+
+export const savePaymentMethod = (data) => (dispatch) => {
+  dispatch({
+    type: CART_PAYMENT_METHOD,
+    payload: data,
+  });
 };

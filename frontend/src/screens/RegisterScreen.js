@@ -66,7 +66,7 @@ const RegisterScreen = (props) => {
                     className="form-control form-control-lg"
                     placeholder="Enter your full name"
                     id="name"
-                    require
+                    required
                     onChange={(e) => setName(e.target.value)}
                   />
                 </div>
@@ -78,7 +78,7 @@ const RegisterScreen = (props) => {
                     className="form-control form-control-lg"
                     placeholder="Enter your email address"
                     id="email"
-                    require
+                    required
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
@@ -90,7 +90,7 @@ const RegisterScreen = (props) => {
                     className="form-control form-control-lg"
                     placeholder="Enter your password"
                     id="password"
-                    require
+                    required
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
@@ -104,7 +104,7 @@ const RegisterScreen = (props) => {
                     className="form-control form-control-lg"
                     placeholder="Confirm your password"
                     id="confirmPassword"
-                    require
+                    required
                     onChange={(e) => setConfirmPassword(e.target.value)}
                   />
                 </div>

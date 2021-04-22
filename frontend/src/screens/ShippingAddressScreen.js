@@ -1,30 +1,28 @@
 import React, { useState } from "react";
-import "./shippingAddressScreen.css";
-import CheckoutSteps from "../components/CheckoutSteps";
-
-import { saveShippingAddress } from "../actions/cartActions";
 import { useDispatch, useSelector } from "react-redux";
+import CheckoutSteps from "../components/CheckoutSteps";
+import { saveShippingAddress } from "../actions/cartActions";
 
 const ShippingAddressScreen = (props) => {
   //first get the signed in user info
   const userSignin = useSelector((state) => state.userSignin);
 
   //Then get user info
-
   const { userInfo } = userSignin;
-
   //Get CART items
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
+
+  //If user is not signed in, then redirect to sign in
   if (!userInfo) {
     props.history.push("/signin");
   }
 
-  const [fullName, setFullName] = useState(saveShippingAddress.fullName);
-  const [address, setAddress] = useState(saveShippingAddress.address);
-  const [city, setCity] = useState(saveShippingAddress.city);
-  const [postalCode, setPostalCode] = useState(saveShippingAddress.postalCode);
-  const [country, setCountry] = useState(saveShippingAddress.country);
+  const [fullName, setFullName] = useState(shippingAddress.fullName);
+  const [address, setAddress] = useState(shippingAddress.address);
+  const [city, setCity] = useState(shippingAddress.city);
+  const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
+  const [country, setCountry] = useState(shippingAddress.country);
 
   const dispatch = useDispatch();
 
@@ -37,7 +35,7 @@ const ShippingAddressScreen = (props) => {
       saveShippingAddress({ fullName, address, city, postalCode, country })
     );
 
-    //Redirect the user to payment
+    //Redirect the user to payment component
     props.history.push("/payment");
   };
   return (
@@ -45,7 +43,7 @@ const ShippingAddressScreen = (props) => {
       <CheckoutSteps step1 step2></CheckoutSteps>
       <hr />
       <div className="container mt-4">
-        <h1>Shipping</h1> <hr />
+        <h2>Shipping Address</h2> <hr />
         <div className="row">
           <div className="col-md-10">
             <form action="#" method="POST" onSubmit={submitHandler}>
@@ -59,7 +57,7 @@ const ShippingAddressScreen = (props) => {
                   id="fullName"
                   onChange={(e) => setFullName(e.target.value)}
                   value={fullName}
-                  require
+                  required
                 />
               </div>
               {/* Shipping ddress */}
@@ -72,7 +70,7 @@ const ShippingAddressScreen = (props) => {
                   id="address"
                   onChange={(e) => setAddress(e.target.value)}
                   value={address}
-                  require
+                  required
                 />
               </div>
               {/* City */}
@@ -85,7 +83,7 @@ const ShippingAddressScreen = (props) => {
                   id="city"
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
-                  require
+                  required
                 />
               </div>
 
@@ -100,7 +98,7 @@ const ShippingAddressScreen = (props) => {
                   maxlength="5"
                   value={postalCode}
                   onChange={(e) => setPostalCode(e.target.value)}
-                  require
+                  required
                 />
               </div>
               {/* Country */}
@@ -114,12 +112,16 @@ const ShippingAddressScreen = (props) => {
                   id="country"
                   value={country}
                   onChange={(e) => setCountry(e.target.value)}
-                  require
+                  required
                 />
               </div>
 
               <div className="form-group">
-                <button role="button" className="btn btn-outline-danger btn-lg">
+                <button
+                  role="button"
+                  type="submit"
+                  className="btn btn-outline-danger btn-lg"
+                >
                   Next
                 </button>
               </div>

@@ -67,6 +67,7 @@ export const signout = () => (dispatch) => {
   //first remove user from localStorage
   localStorage.removeItem("userInfo");
   localStorage.removeItem("cartItems"); // Also remove cart items
+  localStorage.removeItem("shippingAddress"); //Remove address when user singout
 
   //Then dispatch user singout actions
   dispatch({

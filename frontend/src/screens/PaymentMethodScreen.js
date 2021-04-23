@@ -5,13 +5,14 @@ import CheckoutSteps from "../components/CheckoutSteps";
 
 const PaymentMethodScreen = (props) => {
   //Check if user filled in shipping address or not
-  //1. get cart from redux store using useSelector
-
   const cart = useSelector((state) => state.cart);
+
+  //1. get cart from redux store using useSelector
   const { shippingAddress } = cart;
+
   //Check now shipping address
   if (!shippingAddress.address) {
-    props.history.push("/shipping");
+    props.history.push("/placeorder");
   }
 
   const [paymentMethod, setPaymentMethod] = useState("PayPal");

@@ -320,9 +320,14 @@ ul.dropdown-content li {
 }
 
 
-
-
-
+/* Place Order style */
+.place_order_container{
+  position: relative;
+  font-size: 15px;
+}
+.place_order_container img{
+width: 200px;
+}
 /* Footer Styles */
 footer {
   /* grid-area: footer; */

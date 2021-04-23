@@ -32,20 +32,33 @@ function PlaceOrderScreen(props) {
           {/* Left Column */}
           <div className="col-md-8 card">
             <h3 className="text-danger">Shipping Address</h3> <hr />
-            <p>
-              <strong>Name:</strong> {cart.shippingAddress.fullName} <br />
-              <strong>Address: </strong> {cart.shippingAddress.address} <br />
-              <strong>City: </strong> {cart.shippingAddress.city} <br />
-              <strong>Zip Code: </strong> {cart.shippingAddress.postalCode}{" "}
-              <br />
-              <strong>Country: </strong> {cart.shippingAddress.country}
-            </p>
+            <table class="table">
+              <thead>
+                <tr className="text-uppercase">
+                  <th>Full Name</th>
+                  <th>Shopping Address</th>
+                  <th>City</th>
+                  <th>Zip Code</th>
+                  <th>Country</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="text-uppercase">
+                  <td>{cart.shippingAddress.fullName}</td>
+                  <td>{cart.shippingAddress.address}</td>
+                  <td>{cart.shippingAddress.city}</td>
+                  <td>{cart.shippingAddress.postalCode}</td>
+                  <td>{cart.shippingAddress.country}</td>
+                </tr>
+              </tbody>
+            </table>
             <hr />
             {/* Display payment method */}
             <div className="payment-method">
-              <h3 className="text-info">Payment Method</h3>
+              <h3 className="text-danger">Payment Method</h3>
               <p>
-                <strong>Payment Type:</strong> {cart.paymentMethod}
+                <strong className="text-info">Payment Type:</strong>{" "}
+                {cart.paymentMethod}
               </p>
             </div>
             <hr />
@@ -53,8 +66,8 @@ function PlaceOrderScreen(props) {
             <div className="order-items">
               <h3 className="text-danger">Purchased Items</h3> <hr />
               {cart.cartItems.map((item) => (
-                <div key={item.product}>
-                  <div className="">
+                <div className="purchased-item-list d-flex" key={item.product}>
+                  <div>
                     <img
                       src={item.image}
                       alt={item.name}
@@ -72,7 +85,7 @@ function PlaceOrderScreen(props) {
               ))}
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 order-total-summary">
             <h2 className="text-danger">Order Summary</h2> <hr />
             <ul className="list-group">
               <li className="list-group-item">

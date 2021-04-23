@@ -293,13 +293,13 @@ ul.dropdown-content li {
   color: #c0c0c0;
   flex: 1;
   padding: 1rem;
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 
 .checkout-steps>div.active {
   border-top-color: #f08000;
   color: #f08000;
-
+  
 }
 
 .shipping-container {
@@ -307,6 +307,7 @@ ul.dropdown-content li {
   position: relative;
   background-color: #fff;
   height: 100vh;
+
 }
 
 .shipping-container h2 {

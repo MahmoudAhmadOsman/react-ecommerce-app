@@ -11,6 +11,7 @@ const ShippingAddressScreen = (props) => {
   const { userInfo } = userSignin;
   //Get CART items
   const cart = useSelector((state) => state.cart);
+  
   const { shippingAddress } = cart;
 
   //If user is not signed in, then redirect to sign in

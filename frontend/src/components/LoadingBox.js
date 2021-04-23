@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function LoadingBox() {
+const LoadingBox = () => {
   return (
     <div className="container mt-5">
       <div className="row">
@@ -10,4 +10,6 @@ export default function LoadingBox() {
       </div>
     </div>
   );
-}
+};
+
+export default LoadingBox;

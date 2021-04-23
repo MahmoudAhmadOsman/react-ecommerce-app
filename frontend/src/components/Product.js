@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import currencyFormat from "../utils/util";
 import Rating from "./Rating";
-
-export default function Product(props) {
+const Product = (props) => {
   const productListTitle = "All Products";
 
+
+  
   const { products } = props;
   return (
     <section className="product-main-container mt-4">
@@ -37,7 +38,7 @@ export default function Product(props) {
                     ></Rating>
                   </p>
                   <button className="btn btn-outline-dark disabled">
-                   {currencyFormat(product.price)}
+                    {currencyFormat(product.price)}
                   </button>
 
                   <Link
@@ -50,10 +51,10 @@ export default function Product(props) {
               </div>
             </div>
           ))}
-
-          
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Product;

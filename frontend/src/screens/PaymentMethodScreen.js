@@ -12,7 +12,7 @@ const PaymentMethodScreen = (props) => {
 
   //Check now shipping address
   if (!shippingAddress.address) {
-    props.history.push("/placeorder");
+    props.history.push("/shipping");
   }
 
   const [paymentMethod, setPaymentMethod] = useState("PayPal");
@@ -25,7 +25,7 @@ const PaymentMethodScreen = (props) => {
     //2. dispatch action
     dispatch(savePaymentMethod(paymentMethod));
 
-    //Then, redirec the user to placeholder component
+    //Then, redirec the user to place order component
     props.history.push("/placeorder");
   };
 

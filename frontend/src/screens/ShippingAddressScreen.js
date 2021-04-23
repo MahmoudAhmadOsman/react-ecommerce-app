@@ -52,7 +52,7 @@ const ShippingAddressScreen = (props) => {
                 <label htmlFor="fullName">Full Name</label>
                 <input
                   type="text"
-                  className="form-control form-control-lg"
+                  className="form-control form-control-lg text-uppercase"
                   placeholder="Enter your full name"
                   id="fullName"
                   onChange={(e) => setFullName(e.target.value)}
@@ -65,7 +65,7 @@ const ShippingAddressScreen = (props) => {
                 <label htmlFor="address">Street Address & Apt/Suite #</label>
                 <input
                   type="text"
-                  className="form-control form-control-lg"
+                  className="form-control form-control-lg text-uppercase"
                   placeholder="Enter your  address"
                   id="address"
                   onChange={(e) => setAddress(e.target.value)}
@@ -78,7 +78,7 @@ const ShippingAddressScreen = (props) => {
                 <label htmlFor="city">City</label>
                 <input
                   type="text"
-                  className="form-control form-control-lg"
+                  className="form-control form-control-lg text-uppercase"
                   placeholder="Enter your city"
                   id="city"
                   value={city}
@@ -92,7 +92,7 @@ const ShippingAddressScreen = (props) => {
                 <label htmlFor="postalcode">Zip Code</label>
                 <input
                   type="text"
-                  className="form-control form-control-lg"
+                  className="form-control form-control-lg "
                   placeholder="Enter your zip code"
                   id="postalcode"
                   maxlength="5"
@@ -107,8 +107,8 @@ const ShippingAddressScreen = (props) => {
                 <label htmlFor="country">Country</label>
                 <input
                   type="text"
-                  className="form-control form-control-lg"
-                  placeholder="Enter your country"
+                  className="form-control form-control-lg text-uppercase"
+                  placeholder="Enter your country "
                   id="country"
                   value={country}
                   onChange={(e) => setCountry(e.target.value)}

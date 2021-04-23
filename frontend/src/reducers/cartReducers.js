@@ -40,7 +40,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
         shippingAddress: action.payload,
       };
 
-    //== Payment Method Case --  savePaymentMethod is keyword
+    //== Payment Method Case --  paymentMethod is keyword
     case CART_SAVE_PAYMENT_METHOD:
       return {
         ...state,

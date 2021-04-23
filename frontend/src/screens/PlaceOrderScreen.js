@@ -32,26 +32,28 @@ function PlaceOrderScreen(props) {
           {/* Left Column */}
           <div className="col-md-8 card">
             <h3 className="text-danger">Shipping Address</h3> <hr />
-            <table class="table">
-              <thead>
-                <tr className="text-uppercase">
-                  <th>Full Name</th>
-                  <th>Shopping Address</th>
-                  <th>City</th>
-                  <th>Zip Code</th>
-                  <th>Country</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="text-uppercase">
-                  <td>{cart.shippingAddress.fullName}</td>
-                  <td>{cart.shippingAddress.address}</td>
-                  <td>{cart.shippingAddress.city}</td>
-                  <td>{cart.shippingAddress.postalCode}</td>
-                  <td>{cart.shippingAddress.country}</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="table-responsive">
+              <table className="table">
+                <thead>
+                  <tr className="text-uppercase">
+                    <th>Full Name</th>
+                    <th>Shopping Address</th>
+                    <th>City</th>
+                    <th>Zip Code</th>
+                    <th>Country</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="text-uppercase">
+                    <td>{cart.shippingAddress.fullName}</td>
+                    <td>{cart.shippingAddress.address}</td>
+                    <td>{cart.shippingAddress.city}</td>
+                    <td>{cart.shippingAddress.postalCode}</td>
+                    <td>{cart.shippingAddress.country}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <hr />
             {/* Display payment method */}
             <div className="payment-method">

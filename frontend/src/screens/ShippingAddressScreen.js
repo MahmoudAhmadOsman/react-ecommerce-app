@@ -11,7 +11,7 @@ const ShippingAddressScreen = (props) => {
   const { userInfo } = userSignin;
   //Get CART items
   const cart = useSelector((state) => state.cart);
-  
+
   const { shippingAddress } = cart;
 
   //If user is not signed in, then redirect to sign in
@@ -118,11 +118,7 @@ const ShippingAddressScreen = (props) => {
               </div>
 
               <div className="form-group">
-                <button
-                  role="button"
-                  type="submit"
-                  className="btn btn-outline-danger btn-lg"
-                >
+                <button type="submit" className="btn btn-outline-danger btn-lg">
                   Next
                 </button>
               </div>

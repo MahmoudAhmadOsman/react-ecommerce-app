@@ -320,6 +320,17 @@ ul.dropdown-content li {
   color: #333;
 }
 
+/* Payment method style */
+.payment_method__page{
+  position: relative;
+}
+.payment_method__page input[type="radio"]{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+
 
 /* Place Order style */
 .place_order_container {

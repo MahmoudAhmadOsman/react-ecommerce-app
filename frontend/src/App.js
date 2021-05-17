@@ -71,7 +71,7 @@ const App = () => {
         <main>
           <Route path="/cart/:id?" component={CartScreen}></Route>
           <Route path="/product/:id" component={ProductScreen}></Route>
-          <Route path="/signin" component={LoginScreen}></Route>{" "}
+          <Route path="/signin" component={LoginScreen}></Route>
           <Route path="/register" component={RegisterScreen}></Route>
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
           <Route path="/payment" component={PaymentMethodScreen}></Route>

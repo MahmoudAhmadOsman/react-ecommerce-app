@@ -12,7 +12,7 @@ import {
 export const listProducts = () => async (dispatch) => {
   //Now, dispatch the list
   dispatch({
-    type: PRODUCT_LIST_REQUEST,
+    type: PRODUCT_LIST_REQUEST, // For list of all products
   });
 
   //Use try and catch

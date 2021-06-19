@@ -1,4 +1,5 @@
 import React from "react";
+// Wrap the Provider function around the App component so that you all components can have an access to the store in Redux
 import { Provider } from "react-redux";
 
 import ReactDOM from "react-dom";

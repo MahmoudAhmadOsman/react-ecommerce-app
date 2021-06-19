@@ -35,7 +35,7 @@ const App = () => {
         <header className="header-row">
           <div>
             <Link to="/" className="brand">
-              MAO Store
+              Amazon Clone
             </Link>
           </div>
           <div>

@@ -47,7 +47,7 @@ const ShippingAddressScreen = (props) => {
         <h2>Shipping Address</h2> <hr />
         <div className="row">
           <div className="col-md-10">
-            <form action="#" method="POST" onSubmit={submitHandler}>
+            <form  method="POST" onSubmit={submitHandler}>
               {/* Full name */}
               <div className="form-group">
                 <label htmlFor="fullName">Full Name</label>

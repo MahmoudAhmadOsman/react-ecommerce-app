@@ -21,7 +21,7 @@ const App = () => {
   //Get the loged in user from Redux
   const userSignin = useSelector((state) => state.userSignin);
   //Then get user info from usersign
-  const { userInfo } = userSignin; // then use userInfo in signin conditionally
+  const { userInfo } = userSignin; // then use userInfo when signing in conditionally
 
   //User Signout function
   const dispatch = useDispatch();

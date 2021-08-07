@@ -28,7 +28,7 @@ console.log("Order Place action");
         <hr />
         <div className="row">
             { /* Left Column */}
-            <div className="col-md-8 card">
+            <div className="col-md-8 card">``
                 <h3 className="text-danger"> Shipping Address </h3>
                 <hr />
                 <div className="table-responsive">
@@ -87,7 +87,7 @@ console.log("Order Place action");
                         <b> Tax: </b>${cart.taxPrice.toFixed(2)} </li>
                     <div className="total-prices mt-3 mb-3">
                         <h3>Order Total: &nbsp; <strong className="text-danger">
-                            $ {cart.totalPrice.toFixed(2)} </strong>
+                            ${cart.totalPrice.toFixed(2)} </strong>
                         </h3>
                     </div>
                     <button type="button" onClick={placeOrderHandler} className="btn btn-danger btn-lg" disabled={cart.cartItems.length===0}>

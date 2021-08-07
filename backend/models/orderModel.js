@@ -1,49 +1,35 @@
-import mongoose from 'mongoose';
+import express from 'express';
+import expressAsyncHandler from 'express-async-handler';
+import Order from '../models/orderModel.js';
+import { isAuth } from '../utils.js';
 
-const orderSchema = new mongoose.Schema({
-    //1st creaqte order fields as an array
-    orderItems: [
-        {
-            name: { type: String, required: true },
-            qty: { type: Number, required: true },
-            image: { type: String, required: true },
-            price: { type: Number, required: true },
+const orderRouter = express.Router();
 
-            //Product that has been purchased
-            product: {
-                    type: mongoose.Schema.Types.ObjectId,
-                    ref: 'Product',
-                    required: true,
-                    },
-        },
-    ],
-    //Shipping address schema
 
-    shippingAddress: {
-            fullName: { type: String, required: true },
-            address: { type: String, required: true },
-            city: { type: String, required: true },
-            postalCode: { type: String, required: true },
-            country: { type: String, required: true },
-    },
-    
-//Payment methods
-    paymentMethod: { type: String, required: true },
-    itemsPrice: { type: Number, required: true },
-    shippingPrice: { type: Number, required: true },
-    taxPrice: { type: Number, required: true },
-    totalPrice: { type: Number, required: true },
-    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, //Save the user who created the order
-    isPaid: { type: Boolean, default: false },
-    paidAt: { type: Date },
-    isDelivered: { type: Boolean, default: false },
-    deliveredAt: { type: Date },
-  },
-  {
-    timestamps: true,
-  }
+//Order - Post RESTFULL API 
+orderRouter.post(
+  '/',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    if (req.body.orderItems.length === 0) {
+      res.status(400).send({ message: 'Your cart is empty!' });
+    } else {
+      const order = new Order({
+        orderItems: req.body.orderItems,
+        shippingAddress: req.body.shippingAddress,
+        paymentMethod: req.body.paymentMethod,
+        itemsPrice: req.body.itemsPrice,
+        shippingPrice: req.body.shippingPrice,
+        taxPrice: req.body.taxPrice,
+        totalPrice: req.body.totalPrice,
+        user: req.user._id,
+      });
+      const createdOrder = await order.save(); ///Save Order to the database
+      res
+        .status(201)
+        .send({ message: 'New order has been created', order: createdOrder });
+    }
+  })
+);
 
-)
-
-const Order = mongoose.model('Order', orderSchema);
-export default Order;
+export default orderRouter;

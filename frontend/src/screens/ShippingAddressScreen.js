@@ -53,7 +53,7 @@ const ShippingAddressScreen = (props) => {
                 <label htmlFor="fullName">Full Name</label>
                 <input
                   type="text"
-                  className="form-control form-control-lg text-uppercase"
+                  className="form-control form-control-lg"
                   placeholder="Enter your full name"
                   id="fullName"
                   onChange={(e) => setFullName(e.target.value)}
@@ -66,7 +66,7 @@ const ShippingAddressScreen = (props) => {
                 <label htmlFor="address">Street Address & Apt/Suite #</label>
                 <input
                   type="text"
-                  className="form-control form-control-lg text-uppercase"
+                  className="form-control form-control-lg"
                   placeholder="Enter your  address"
                   id="address"
                   onChange={(e) => setAddress(e.target.value)}
@@ -79,7 +79,7 @@ const ShippingAddressScreen = (props) => {
                 <label htmlFor="city">City</label>
                 <input
                   type="text"
-                  className="form-control form-control-lg text-uppercase"
+                  className="form-control form-control-lg"
                   placeholder="Enter your city"
                   id="city"
                   value={city}
@@ -108,7 +108,7 @@ const ShippingAddressScreen = (props) => {
                 <label htmlFor="country">Country</label>
                 <input
                   type="text"
-                  className="form-control form-control-lg text-uppercase"
+                  className="form-control form-control-lg"
                   placeholder="Enter your country "
                   id="country"
                   value={country}

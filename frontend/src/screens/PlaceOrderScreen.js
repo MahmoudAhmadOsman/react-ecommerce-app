@@ -9,13 +9,16 @@ if (!cart.paymentMethod) {
     props.history.push("/payment");
 }
 //Calculate prices & Tax
+    
 const toPrice = (num) => Number(num.toFixed(2));
 cart.itemsPrice = toPrice(
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
 );
 cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(10);
 cart.taxPrice = toPrice(0.06 * cart.itemsPrice);
-cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
+    cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
+    
+    
 const placeOrderHandler = () => {
 // TODO: dispatch place order action
 console.log("Order Place action");

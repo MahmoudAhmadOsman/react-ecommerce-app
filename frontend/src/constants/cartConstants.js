@@ -8,3 +8,6 @@ export const CART_SAVE_SHIPPING_ADDRESS = "CART_SAVE_SHIPPING_ADDRESS";
 
 //Payment method action
 export const CART_SAVE_PAYMENT_METHOD = "CART_SAVE_PAYMENT_METHOD";
+
+//Empty cart items
+export const CART_EMPTY = "CART_EMPTY";

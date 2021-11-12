@@ -7,7 +7,10 @@ import {
 } from "../constants/orderConstants";
 
 export const createOrder = (order) => async (dispatch, getState) => {
-	dispatch({ type: ORDER_CREATE_REQUEST, payload: order });
+    dispatch({
+        type: ORDER_CREATE_REQUEST,
+        payload: order
+    });
 	try {
 		const {
 			userSignin: { userInfo }, // Get the signed in user info
@@ -18,10 +21,8 @@ export const createOrder = (order) => async (dispatch, getState) => {
 			},
 		});
 		dispatch({ type: ORDER_CREATE_SUCCESS, payload: data.order });
-
-		dispatch({ type: CART_EMPTY }); //Clean the cart
-
-		localStorage.removeItem("cartItems"); //clear the localStorage
+		dispatch({ type: CART_EMPTY }); //Clear the cart
+		localStorage.removeItem("cartItems"); //clear localStorage
 	} catch (error) {
 		dispatch({
 			type: ORDER_CREATE_FAIL,

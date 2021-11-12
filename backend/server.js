@@ -24,8 +24,8 @@ app.use("/api/products", productRouter); //Products api
 app.use("/api/orders", orderRouter); //Orders api
 
 app.get("/", (req, res) => {
-	res.send("Server is running"); //http://localhost:5000/ express homepage 
-	// http://localhost:5000/api/products
+	res.send("Server is running"); //http://localhost:5000/ express homepage
+	// http://localhost:5000/api/products -> backend api
 });
 
 //Show all errors - server errors

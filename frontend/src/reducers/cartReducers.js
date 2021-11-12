@@ -50,7 +50,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
 
 		//== Cart Empty Case
 		case CART_EMPTY:
-			return { ...state, cartItems: [] }; //set the cart item to an empty array
+			return { ...state, cartItems: [] };
 
 		default:
 			return state;

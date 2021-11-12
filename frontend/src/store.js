@@ -3,6 +3,7 @@ import { applyMiddleware, compose, createStore, combineReducers } from "redux";
 import thunk from "redux-thunk";
 import { cartReducer } from "./reducers/cartReducers";
 import { orderCreateReducer } from "./reducers/orderReducers";
+
 import {
 	productDetailsReducer,
 	productListReducer,

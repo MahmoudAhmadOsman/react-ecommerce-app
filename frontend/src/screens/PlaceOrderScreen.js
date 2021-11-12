@@ -2,18 +2,20 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
+
 import { Link } from "react-router-dom";
 import { createOrder } from "../actions/orderActions";
+
 import CheckoutSteps from "../components/CheckoutSteps";
 import { ORDER_CREATE_RESET } from "../constants/orderConstants";
 
-const PlaceOrderScreen = (props) =>{
+const PlaceOrderScreen = (props) => {
 	const cart = useSelector((state) => state.cart);
 	if (!cart.paymentMethod) {
 		props.history.push("/payment");
 	}
 
-	//After placing an order
+	//After placing an order - check order state
 	const orderCreate = useSelector((state) => state.orderCreate);
 	const { loading, success, error, order } = orderCreate;
 
@@ -27,17 +29,16 @@ const PlaceOrderScreen = (props) =>{
 	cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
 
 	//dispatch place order action
-
 	const dispatch = useDispatch();
 	const placeOrderHandler = () => {
-		//dispatch(takes func, ({name cart items to orderITem}))
+		console.log("Order is submitted!");
 		dispatch(createOrder({ ...cart, orderItems: cart.cartItems }));
 	};
 
 	//Define the loading, success, error and order variables
 	useEffect(() => {
 		if (success) {
-			props.history.push(`/order/${order._id}`);
+			props.history.push(`/order/${order._id}`); //if success, redirect user to order details page
 			dispatch({ type: ORDER_CREATE_RESET });
 		}
 	}, [dispatch, order, props.history, success]);
@@ -53,7 +54,7 @@ const PlaceOrderScreen = (props) =>{
 				<div className="row">
 					{/* Left Column */}
 					<div className="col-md-8 card">
-						``
+						{/* `` */}
 						<h3 className="text-danger"> Shipping Address </h3>
 						<hr />
 						<div className="table-responsive">
@@ -139,8 +140,7 @@ const PlaceOrderScreen = (props) =>{
 							>
 								Place Order{" "}
 							</button>
-						</ul>{" "}
-						{/*Check loading after order is submit  */}
+						</ul>
 						{loading && <LoadingBox></LoadingBox>}
 						{error && <MessageBox variant="danger">{error}</MessageBox>}
 					</div>
@@ -148,5 +148,5 @@ const PlaceOrderScreen = (props) =>{
 			</div>
 		</section>
 	);
-}
+};
 export default PlaceOrderScreen;

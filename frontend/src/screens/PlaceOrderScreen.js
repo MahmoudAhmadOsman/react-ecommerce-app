@@ -16,6 +16,7 @@ const PlaceOrderScreen = (props) => {
 	}
 
 	//After placing an order - check order state
+	//get oreders from redux store - using [useSelector] hook
 	const orderCreate = useSelector((state) => state.orderCreate);
 	const { loading, success, error, order } = orderCreate;
 
@@ -40,7 +41,7 @@ const PlaceOrderScreen = (props) => {
 		if (success) {
 			props.history.push(`/order/${order._id}`); //if success, redirect user to order details page
 			dispatch({ type: ORDER_CREATE_RESET });
-		}
+		} 
 	}, [dispatch, order, props.history, success]);
 
 	return (

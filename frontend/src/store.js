@@ -33,7 +33,7 @@ const InitialState = {
 			? JSON.parse(localStorage.getItem("shippingAddress"))
 			: {},
 
-		//For payment method
+		//For payment method - default
 		paymentMethod: "PayPal",
 	},
 };

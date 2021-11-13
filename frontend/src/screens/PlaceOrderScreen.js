@@ -33,7 +33,7 @@ const PlaceOrderScreen = (props) => {
 	const dispatch = useDispatch();
 	const placeOrderHandler = () => {
 		console.log("Order is submitted!");
-		dispatch(createOrder({ ...cart, orderItems: cart.cartItems }));
+		 dispatch(createOrder({ ...cart, orderItems: cart.cartItems }));
 	};
 
 	//Define the loading, success, error and order variables
@@ -141,9 +141,10 @@ const PlaceOrderScreen = (props) => {
 							>
 								Place Order{" "}
 							</button>
-						</ul>
-						{loading && <LoadingBox></LoadingBox>}
+							{loading && <LoadingBox></LoadingBox>}
 						{error && <MessageBox variant="danger">{error}</MessageBox>}
+						</ul>
+						
 					</div>
 				</div>
 			</div>

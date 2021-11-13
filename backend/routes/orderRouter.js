@@ -22,11 +22,10 @@ orderRouter.post(
 				taxPrice: req.body.taxPrice,
 				totalPrice: req.body.totalPrice,
 				user: req.user._id,
-			});
+      });
+      
 			const createdOrder = await order.save(); ///Save Order to the database
-			res
-				.status(201)
-				.send({ message: "New order has been created", order: createdOrder });
+			res.status(201).send({ message: "New order has been created", order: createdOrder });
 		}
 	})
 );

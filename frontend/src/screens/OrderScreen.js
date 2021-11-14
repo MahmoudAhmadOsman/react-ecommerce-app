@@ -24,7 +24,7 @@ const OrderScreen = (props) => {
 	return loading ? (
 		<LoadingBox></LoadingBox>
 	) : error ? (
-		<MessageBox variant="danger">{error}</MessageBox>
+		<MessageBox variant="danger text-center">{error}</MessageBox>
 	) : (
 		<section className="place_order_container mt-4">
 			<div className="container">

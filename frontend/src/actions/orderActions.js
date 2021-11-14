@@ -60,7 +60,7 @@ export const detailsOrder = (orderId) => async (dispatch, getState) => {
 				? error.response.data.message
 				: error.message;
 		dispatch({
-			ype: ORDER_DETAILS_FAIL,
+			type: ORDER_DETAILS_FAIL,
 			payload: message,
 		});
 	}

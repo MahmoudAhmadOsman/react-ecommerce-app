@@ -28,7 +28,7 @@ const OrderScreen = (props) => {
 	) : (
 		<section className="place_order_container mt-4">
 			<div className="container">
-				<h1 className="text-muted">Order Summary </h1>
+				<h1 className="text-info">Order Summary </h1>
 				<hr />
 				<small className="text-muted mb-3">Order ID: {order._id}</small>
 				<div className="row">
@@ -58,6 +58,17 @@ const OrderScreen = (props) => {
 									</tr>
 								</tbody>
 							</table>
+							{/* Show if order is delivered or not */}
+
+							{order.isDelivered ? (
+								<MessageBox variant="success">
+									Delivered at {order.deliveredAt}
+								</MessageBox>
+							) : (
+								<MessageBox variant="danger">
+									Order is not delivered yet!
+								</MessageBox>
+							)}
 						</div>
 						<hr /> {/* Display payment method */}{" "}
 						<div className="payment-method">
@@ -66,6 +77,12 @@ const OrderScreen = (props) => {
 								<strong className="text-info"> Payment Type: </strong>{" "}
 								{order.paymentMethod}{" "}
 							</p>
+
+							{/* Show message is order is paid or not */}
+
+                                    {order.isPaid ?<MessageBox variant="success">Order is paid at {order.paidAt} </MessageBox> : (
+                                       <MessageBox variant="danger">Order is not paid yet!</MessageBox>
+                            )}
 						</div>
 						<hr /> {/* Display Order Items*/}{" "}
 						<div className="order-items">

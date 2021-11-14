@@ -38,13 +38,12 @@ userRouter.post(
 				return;
 			}
 		}
-		//If user doesnt exist or user email or password in incorrect
+		//If user doesn't exist or user email or password is in incorrect
 		res.status(401).send({ message: "Wrong email or password!" });
 	})
 );
 
 //Registeration router
-
 userRouter.post(
 	"/register",
 	expressAsyncHandler(async (req, res) => {

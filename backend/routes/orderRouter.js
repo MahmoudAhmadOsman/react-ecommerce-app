@@ -5,7 +5,7 @@ import { isAuth } from "../utils.js";
 
 const orderRouter = express.Router();
 
-//Order - Post RESTFULL API
+//Order Route - Post RESTFULL API
 orderRouter.post(
 	"/",
 	isAuth,
@@ -22,12 +22,31 @@ orderRouter.post(
 				taxPrice: req.body.taxPrice,
 				totalPrice: req.body.totalPrice,
 				user: req.user._id,
-      });
-      
+			});
+
 			const createdOrder = await order.save(); ///Save Order to the database
-			res.status(201).send({ message: "New order has been created", order: createdOrder });
+			res
+				.status(201)
+				.send({ message: "New order has been created", order: createdOrder });
 		}
 	})
 );
 
+//Get an order by its id - route
+orderRouter.get(
+	"/:id",
+	isAuth,
+	expressAsyncHandler(async (req, res) => {
+		//1. Get order from the database
+		const order = await Order.findById(req.params.id);
+		//Check if order exists or not
+		if (order) {
+			res.send(order);
+		} else {
+			res.status(404).send({ message: "Order Not Found!" });
+		}
+	})
+);
+
+//2. use this route in the App/frontend
 export default orderRouter;

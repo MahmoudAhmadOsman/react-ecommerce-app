@@ -2,7 +2,10 @@
 import { applyMiddleware, compose, createStore, combineReducers } from "redux";
 import thunk from "redux-thunk";
 import { cartReducer } from "./reducers/cartReducers";
-import { orderCreateReducer } from "./reducers/orderReducers";
+import {
+	orderCreateReducer,
+	orderDetailsReducer,
+} from "./reducers/orderReducers";
 
 import {
 	productDetailsReducer,
@@ -53,6 +56,7 @@ const reducer = combineReducers({
 	//keys here are: [productList, productDetails, cart, userSignin] - use these keys you will have access to the redux store
 	userRegister: userRegisterReducer,
 	orderCreate: orderCreateReducer,
+	orderDetails: orderDetailsReducer,
 }); //4.=> now go the homeScreen.js and get rid off React Hooks and instead use productList from redux store
 
 //Now, add thunk for Google Chrome in order to see action & state changes

@@ -80,9 +80,13 @@ const OrderScreen = (props) => {
 
 							{/* Show message is order is paid or not */}
 
-                                    {order.isPaid ?<MessageBox variant="success">Order is paid at {order.paidAt} </MessageBox> : (
-                                       <MessageBox variant="danger">Order is not paid yet!</MessageBox>
-                            )}
+							{order.isPaid ? (
+								<MessageBox variant="success">
+									Order is paid at {order.paidAt}{" "}
+								</MessageBox>
+							) : (
+								<MessageBox variant="danger">Order is not paid yet!</MessageBox>
+							)}
 						</div>
 						<hr /> {/* Display Order Items*/}{" "}
 						<div className="order-items">

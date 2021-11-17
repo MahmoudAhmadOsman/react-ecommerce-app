@@ -8,6 +8,7 @@ import { detailsOrder } from "../actions/orderActions";
 
 const OrderScreen = (props) => {
 	const orderId = props.match.params.id;
+
 	//Now, get order details info from orderActions dispatch actions by using useSelector hook
 	const orderDetails = useSelector((state) => state.orderDetails);
 	//then, exact order, loading, and error from orderActions dispatch
@@ -30,7 +31,16 @@ const OrderScreen = (props) => {
 			<div className="container">
 				<h1 className="text-info">Order Summary </h1>
 				<hr />
-				<small className="text-muted mb-3">Order ID: {order._id}</small>
+				<p className="mb-3">
+					<b className="text-success">Order ID:</b> {order._id}
+					&nbsp;
+					<small>
+						<i
+							class="fa fa-check-circle fa-2x text-success"
+							aria-hidden="true"
+						></i>
+					</small>
+				</p>
 				<div className="row">
 					{/* Left Column */}
 					<div className="col-md-8 card">
@@ -39,7 +49,7 @@ const OrderScreen = (props) => {
 						<hr />
 						<div className="table-responsive">
 							<table className="table">
-								<thead>
+								<thead className="thead-dark">
 									<tr className="text-uppercase">
 										<th> Full Name </th>
 										<th> Shopping Address </th>
@@ -120,7 +130,7 @@ const OrderScreen = (props) => {
 								<b> Item(s) Price: </b> ${order.itemsPrice.toFixed(2)}{" "}
 							</li>
 							<li className="list-group-item">
-								<b> Shipping: </b> ${order.shippingPrice.toFixed(2)}{" "}
+								<b> Shipping Fees: </b> ${order.shippingPrice.toFixed(2)}{" "}
 							</li>
 							<li className="list-group-item">
 								<b> Tax: </b>${order.taxPrice.toFixed(2)}{" "}

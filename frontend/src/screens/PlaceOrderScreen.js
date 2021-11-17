@@ -60,7 +60,7 @@ const PlaceOrderScreen = (props) => {
 						<hr />
 						<div className="table-responsive">
 							<table className="table">
-								<thead>
+								<thead className="thead-dark">
 									<tr className="text-uppercase">
 										<th> Full Name </th>
 										<th> Shopping Address </th>
@@ -142,9 +142,8 @@ const PlaceOrderScreen = (props) => {
 								Place Order{" "}
 							</button>
 							{loading && <LoadingBox></LoadingBox>}
-						{error && <MessageBox variant="danger">{error}</MessageBox>}
+							{error && <MessageBox variant="danger">{error}</MessageBox>}
 						</ul>
-						
 					</div>
 				</div>
 			</div>

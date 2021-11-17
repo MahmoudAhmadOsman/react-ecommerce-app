@@ -8,32 +8,32 @@ import { listProducts } from "../actions/productActions";
 //import data from "../data";
 
 export default function HomeScreen() {
-  //Now use redux store instead of using react hooks
-  const dispatch = useDispatch();
-  const productList = useSelector((state) => state.productList);
+	//Now use redux store instead of using react hooks
+	const dispatch = useDispatch();
+	const productList = useSelector((state) => state.productList);
 
-  //Now, get the values, loading, error and products from productsLists function
-  const { loading, error, products } = productList;
+	//Now, get the values, loading, error and products from productsLists function
+	const { loading, error, products } = productList;
 
-  /*No need to have the fetch data function anymore because, we're using store now*/
-  useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+	/*No need to have the fetch data function anymore because, we're using store now*/
+	useEffect(() => {
+		dispatch(listProducts());
+	}, [dispatch]);
 
-  return (
-    <div>
-      {loading ? (
-        <LoadingBox></LoadingBox>
-      ) : error ? (
-        <MessageBox variant="danger text-center mt-4">{error}</MessageBox>
-      ) : (
-        <>
-          <Product products={products}></Product>
-          {/* {products.map((product) => (
+	return (
+		<div>
+			{loading ? (
+				<LoadingBox></LoadingBox>
+			) : error ? (
+				<MessageBox variant="danger text-center mt-4">{error}</MessageBox>
+			) : (
+				<>
+					<Product products={products}></Product>{/*Pass products as props to the Product component  */}
+					{/* {products.map((product) => (
             <Product key={product._id} product={product}></Product>
           ))} */}
-        </>
-      )}
-    </div>
-  );
+				</>
+			)}
+		</div>
+	);
 }

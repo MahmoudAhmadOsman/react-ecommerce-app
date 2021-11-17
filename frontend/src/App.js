@@ -34,7 +34,7 @@ const App = () => {
 
 	return (
 		<BrowserRouter>
-			<div className="grid-container">
+			<section className="grid-container">
 				<header className="header-row">
 					<div>
 						<Link to="/" className="brand">
@@ -84,7 +84,7 @@ const App = () => {
 					{/* <Route path="*" component={NotFound}></Route> */}
 				</main>
 				<Footer />
-			</div>
+			</section>
 		</BrowserRouter>
 	);
 };

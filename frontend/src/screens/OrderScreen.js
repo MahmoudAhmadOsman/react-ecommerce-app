@@ -75,7 +75,7 @@ const OrderScreen = (props) => {
 							aria-hidden="true"></i>
 					</small>
 				</p>
-				<div className="row">
+<div className="row">
 					{/* Left Column */}
 					<div className="col-md-8 card">
 						{/* `` */}

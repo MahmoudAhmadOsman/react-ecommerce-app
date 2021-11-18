@@ -24,7 +24,6 @@ const OrderScreen = (props) => {
 
 	//dispatch order details inside use effect
 	useEffect(() => {
-		
 		//PayPal script function
 		const addPayPalScript = async () => {
 			const { data } = await Axios.get("/api/config/paypal");
@@ -72,10 +71,8 @@ const OrderScreen = (props) => {
 					<b className="text-success">Order ID:</b> {order._id}
 					&nbsp;
 					<small>
-						<i
-							class="fa fa-check-circle fa-2x text-success"
-							aria-hidden="true"
-						></i>
+						<i class="fa fa-check-circle fa-2x text-success"
+							aria-hidden="true"></i>
 					</small>
 				</p>
 				<div className="row">

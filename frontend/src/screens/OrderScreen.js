@@ -71,11 +71,13 @@ const OrderScreen = (props) => {
 					<b className="text-success">Order ID:</b> {order._id}
 					&nbsp;
 					<small>
-						<i class="fa fa-check-circle fa-2x text-success"
-							aria-hidden="true"></i>
+						<i
+							class="fa fa-check-circle fa-2x text-success"
+							aria-hidden="true"
+						></i>
 					</small>
 				</p>
-<div className="row">
+				<div className="row">
 					{/* Left Column */}
 					<div className="col-md-8 card">
 						{/* `` */}
@@ -169,19 +171,6 @@ const OrderScreen = (props) => {
 							<li className="list-group-item">
 								<b> Tax: </b>${order.taxPrice.toFixed(2)}{" "}
 							</li>
-							{/* Show Paypal button by conditionally */}
-							{!order.isPaid && (
-								<li>
-									{!sdkReady ? (
-										<LoadingBox></LoadingBox>
-									) : (
-										<PayPalButton
-											amount={order.totalPrice}
-											onSuccess={successPaymentHnadler}
-										></PayPalButton>
-									)}
-								</li>
-							)}
 
 							<div className="total-prices mt-3 mb-3">
 								<h3>
@@ -189,7 +178,22 @@ const OrderScreen = (props) => {
 									<strong className="text-danger">
 										${order.totalPrice.toFixed(2)}{" "}
 									</strong>
-								</h3>
+										</h3>
+										
+
+								{/* Show Paypal button by conditionally */}
+								{!order.isPaid && (
+									<div className="mt-4">
+										{!sdkReady ? (
+											<LoadingBox></LoadingBox>
+										) : (
+											<PayPalButton
+												amount={order.totalPrice}
+												onSuccess={successPaymentHnadler}
+											></PayPalButton>
+										)}
+									</div>
+								)}
 							</div>
 						</ul>
 					</div>

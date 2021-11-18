@@ -24,10 +24,8 @@ export const orderCreateReducer = (state = {}, action) => {
 };
 
 //Oder Details Reducer
-export const orderDetailsReducer = (
-	state = { loading: true, order: {} },
-	action
-) => {
+// state = { loading: true, order: {} }, //changed for paypal
+export const orderDetailsReducer = ( state = { loading: true }, action) => {
 	switch (action.type) {
 		case ORDER_DETAILS_REQUEST:
 			return {

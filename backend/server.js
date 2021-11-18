@@ -23,6 +23,11 @@ app.use("/api/users", userRouter); //Users api
 app.use("/api/products", productRouter); //Products api
 app.use("/api/orders", orderRouter); //Orders api
 
+//PayPal API
+app.use("/api/config/paypal", (req, res) => {
+	res.send(process.env.PAYPAL_CLIENT_ID || "sb"); // sandbox for sb
+});
+
 app.get("/", (req, res) => {
 	res.send("Server is running"); //http://localhost:5000/ express homepage
 	// http://localhost:5000/api/products -> backend api

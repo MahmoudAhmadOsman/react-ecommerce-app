@@ -28,11 +28,6 @@ app.use("/api/config/paypal", (req, res) => {
 	res.send(process.env.PAYPAL_CLIENT_ID || "sb"); // sandbox for sb
 });
 
-// app.get("/", (req, res) => {
-// 	res.send("Server is running");
-
-// });
-
 //Serve React build files in production
 const __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
@@ -41,6 +36,10 @@ app.get("*", (req, res) =>
 	res.sendFile(path.join(__dirname, "/frontend/build/index.html"))
 );
 
+// app.get("/", (req, res) => {
+// 	res.send("Server is running");
+
+// });
 //Show all errors - server errors
 app.use((err, req, res, next) => {
 	res.status(500).send({ message: err.message });

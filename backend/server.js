@@ -28,10 +28,10 @@ app.use("/api/config/paypal", (req, res) => {
 	res.send(process.env.PAYPAL_CLIENT_ID || "sb"); // sandbox for sb
 });
 
-app.get("/", (req, res) => {
-	res.send("Server is running"); //http://localhost:5000/ express homepage
-	// http://localhost:5000/api/products -> backend api
-});
+// app.get("/", (req, res) => {
+// 	res.send("Server is running");
+
+// });
 
 //Serve React build files in production
 const __dirname = path.resolve();

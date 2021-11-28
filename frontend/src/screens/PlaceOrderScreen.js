@@ -32,7 +32,7 @@ const PlaceOrderScreen = (props) => {
 	//dispatch place order action
 	const dispatch = useDispatch();
 	const placeOrderHandler = () => {
-		console.log("Order is submitted!");
+		// console.log("Order is submitted!");
 		 dispatch(createOrder({ ...cart, orderItems: cart.cartItems }));
 	};
 

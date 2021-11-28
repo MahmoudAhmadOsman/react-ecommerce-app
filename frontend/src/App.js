@@ -15,6 +15,7 @@ import PaymentMethodScreen from "./screens/PaymentMethodScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/OrderScreen";
 import NotFound from "./components/NotFound";
+import OrderHistoryScreen from "./screens/OrderHistoryScreen";
 
 const App = () => {
 	// Add cart badge - get it from redux by using useSelector which will bring the cart from redux
@@ -60,8 +61,13 @@ const App = () => {
 								</Link>
 								<ul className="dropdown-content">
 									<li>
+										<Link to="orderhistory">
+											<small>Order History</small>
+										</Link>
+									</li>
+									<li>
 										<Link to="#signout" onClick={signoutHandler}>
-											Sign Out
+											<small> Sign Out</small>
 										</Link>
 									</li>
 								</ul>
@@ -72,7 +78,7 @@ const App = () => {
 					</div>
 				</header>
 				<main>
-					<Route path="/" component={HomeScreen} exact={true}></Route>
+					{/* <Route path="/" component={HomeScreen} exact={true}></Route> */}
 					<Route path="/cart/:id?" component={CartScreen}></Route>
 					<Route path="/product/:id" component={ProductScreen}></Route>
 					<Route path="/signin" component={LoginScreen}></Route>
@@ -81,6 +87,8 @@ const App = () => {
 					<Route path="/payment" component={PaymentMethodScreen}></Route>
 					<Route path="/placeorder" component={PlaceOrderScreen}></Route>
 					<Route path="/order/:id" component={OrderScreen}></Route>
+					<Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+					<Route path="/" component={HomeScreen} exact={true}></Route>
 					{/* <Route path="*" component={NotFound}></Route> */}
 				</main>
 				<Footer />

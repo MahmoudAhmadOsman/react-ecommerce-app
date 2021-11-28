@@ -5,6 +5,7 @@ import { cartReducer } from "./reducers/cartReducers";
 import {
 	orderCreateReducer,
 	orderDetailsReducer,
+	OrderMineListReducer,
 } from "./reducers/orderReducers";
 
 import {
@@ -57,6 +58,7 @@ const reducer = combineReducers({
 	userRegister: userRegisterReducer,
 	orderCreate: orderCreateReducer,
 	orderDetails: orderDetailsReducer,
+	orderMineList: OrderMineListReducer,
 }); //4.=> now go the homeScreen.js and get rid off React Hooks and instead use productList from redux store
 
 //Now, add thunk for Google Chrome in order to see action & state changes

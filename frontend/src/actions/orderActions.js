@@ -7,6 +7,9 @@ import {
 	ORDER_DETAILS_FAIL,
 	ORDER_DETAILS_REQUEST,
 	ORDER_DETAILS_SUCCESS,
+	ORDER_MINE_LIST_FAIL,
+	ORDER_MINE_LIST_REQUEST,
+	ORDER_MINE_LIST_SUCCESS,
 } from "../constants/orderConstants";
 
 export const createOrder = (order) => async (dispatch, getState) => {
@@ -65,3 +68,34 @@ export const detailsOrder = (orderId) => async (dispatch, getState) => {
 		});
 	}
 };
+
+//Order History Action
+export const listOrderMine = () => async (dispatch, getState) => {
+	dispatch({ type: ORDER_MINE_LIST_REQUEST }); // no pay here
+	const {
+		userSignin: { userInfo },
+	} = getState();
+	try {
+		const { data } = await Axios.get("/api/orders/mine", {
+			headers: {
+				Authorization: `Bearer ${userInfo.token}`,
+			},
+		});
+		dispatch({ type: ORDER_MINE_LIST_SUCCESS, payload: data });
+	} catch (error) {
+		const message =
+			error.response && error.response.data.message
+				? error.response.data.message
+				: error.message;
+		dispatch({ type: ORDER_MINE_LIST_FAIL, payload: message });
+	}
+};
+//Plan
+
+// In order to get list of order history, define
+// 1. OrderHistory Constant
+// 2. Order Action
+// 2. Reducer
+// 3. then add this to store.js
+// 4. get loading, error and orders from Redux store
+// and use them in the OrderHistory.js screen

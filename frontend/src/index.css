@@ -347,6 +347,15 @@ ul.dropdown-content li {
 	border-left: 1.8px solid #f57a00;
 }
 
+/* Start of order history */
+.order-history {
+	position: relative;
+}
+.order-history table {
+	font-size: 17px;
+}
+/* End of order history */
+
 /* Footer Styles */
 footer {
 	/* grid-area: footer; */

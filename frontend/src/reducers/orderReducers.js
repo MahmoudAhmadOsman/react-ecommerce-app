@@ -6,6 +6,9 @@ import {
 	ORDER_DETAILS_FAIL,
 	ORDER_DETAILS_REQUEST,
 	ORDER_DETAILS_SUCCESS,
+	ORDER_MINE_LIST_FAIL,
+	ORDER_MINE_LIST_REQUEST,
+	ORDER_MINE_LIST_SUCCESS,
 } from "../constants/orderConstants";
 
 export const orderCreateReducer = (state = {}, action) => {
@@ -25,7 +28,7 @@ export const orderCreateReducer = (state = {}, action) => {
 
 //Oder Details Reducer
 // state = { loading: true, order: {} }, //changed for paypal
-export const orderDetailsReducer = ( state = { loading: true }, action) => {
+export const orderDetailsReducer = (state = { loading: true }, action) => {
 	switch (action.type) {
 		case ORDER_DETAILS_REQUEST:
 			return {
@@ -41,6 +44,30 @@ export const orderDetailsReducer = ( state = { loading: true }, action) => {
 				loading: false,
 				error: action.payload,
 			};
+		default:
+			return state;
+	}
+};
+
+//Order History Reducer
+
+export const OrderMineListReducer = (state = { orders: [] }, action) => {
+	switch (action.type) {
+		case ORDER_MINE_LIST_REQUEST:
+			return {
+				loading: true,
+			};
+		case ORDER_MINE_LIST_SUCCESS:
+			return {
+				loading: false,
+				orders: action.payload,
+			};
+		case ORDER_MINE_LIST_FAIL:
+			return {
+				loading: false,
+				errors: action.payload,
+			};
+
 		default:
 			return state;
 	}

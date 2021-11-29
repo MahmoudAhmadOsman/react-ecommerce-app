@@ -16,6 +16,7 @@ import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/OrderScreen";
 import NotFound from "./components/NotFound";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 
 const App = () => {
 	// Add cart badge - get it from redux by using useSelector which will bring the cart from redux
@@ -66,6 +67,11 @@ const App = () => {
 										</Link>
 									</li>
 									<li>
+										<Link to="/profile">
+											<small>User Profile</small>
+										</Link>
+									</li>
+									<li>
 										<Link to="#signout" onClick={signoutHandler}>
 											<small> Sign Out</small>
 										</Link>
@@ -88,6 +94,7 @@ const App = () => {
 					<Route path="/placeorder" component={PlaceOrderScreen}></Route>
 					<Route path="/order/:id" component={OrderScreen}></Route>
 					<Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+					<Route path="/profile" component={ProfileScreen}></Route>
 					<Route path="/" component={HomeScreen} exact={true}></Route>
 					{/* <Route path="*" component={NotFound}></Route> */}
 				</main>

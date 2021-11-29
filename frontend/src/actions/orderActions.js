@@ -90,7 +90,7 @@ export const listOrderMine = () => async (dispatch, getState) => {
 		dispatch({ type: ORDER_MINE_LIST_FAIL, payload: message });
 	}
 };
-//Plan
+//Plan for displaying order list
 
 // In order to get list of order history, define
 // 1. OrderHistory Constant

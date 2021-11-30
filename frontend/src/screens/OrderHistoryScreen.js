@@ -33,6 +33,7 @@ const OrderHistoryScreen = (props) => {
 									<thead class="thead-dark">
 										<tr>
 											<th>ORDER ID</th>
+
 											<th>DATE</th>
 											<th>TOTAL</th>
 											<th>PAID</th>
@@ -44,15 +45,26 @@ const OrderHistoryScreen = (props) => {
 										{orders.map((order) => (
 											<tr key={order._id}>
 												<td>{order._id}</td>
+
 												<td>{order.createdAt.substring(0, 10)}</td>
 												<td>{order.totalPrice.toFixed(2)}</td>
 												<td>
-													{order.isPaid ? order.paidAt.substring(0, 10) : "NO"}
+													{order.isPaid ? (
+														order.paidAt.substring(0, 10)
+													) : (
+														<span className="text-danger font-weight-bold">
+															NO
+														</span>
+													)}
 												</td>
 												<td>
-													{order.isDelivered
-														? order.deliveredAt.substring(0, 10)
-														: "NO"}
+													{order.isDelivered ? (
+														order.deliveredAt.substring(0, 10)
+													) : (
+														<span className="text-danger font-weight-bold">
+															NO
+														</span>
+													)}
 												</td>
 												<td>
 													<button

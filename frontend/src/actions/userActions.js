@@ -106,6 +106,9 @@ export const detailsUser = (userId) => async (dispatch, getState) => {
 			error.response && error.response.data.message
 				? error.response.data.message
 				: error.message;
-		dispatch({ type: USER_DETAILS_FAIL, payload: message });
+		dispatch({
+			type: USER_DETAILS_FAIL,
+			payload: message
+		});
 	}
 };

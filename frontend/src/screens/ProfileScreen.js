@@ -22,13 +22,15 @@ const ProfileScreen = () => {
 	return (
 		<section className="user-profile">
 			<div className="container">
-				<h1 className="text-danger mt-3">
+				
+				
+				<div className="row">
+					<div className="col-md-3"></div>
+					<div className="col-md-6 mt-3">
+						<h1 className="text-danger mt-3">
 					<i className="fa fa-user-circle">&nbsp;</i>
 					User Profile
-				</h1>{" "}
-				<hr />
-				<div className="row">
-					<div className="col-md-6 mt-3">
+				</h1>{" "}<hr />
 						{loading ? (
 							<LoadingBox></LoadingBox>
 						) : error ? (
@@ -84,6 +86,7 @@ const ProfileScreen = () => {
 							</>
 						)}
 					</div>
+					<div className="col-md-3"></div>
 				</div>
 			</div>
 		</section>

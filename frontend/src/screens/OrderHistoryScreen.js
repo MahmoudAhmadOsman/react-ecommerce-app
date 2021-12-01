@@ -33,7 +33,6 @@ const OrderHistoryScreen = (props) => {
 									<thead class="thead-dark">
 										<tr>
 											<th>ORDER ID</th>
-
 											<th>DATE</th>
 											<th>TOTAL</th>
 											<th>PAID</th>

@@ -91,6 +91,7 @@ export const detailsUser = (userId) => async (dispatch, getState) => {
 		type: USER_DETAILS_REQUEST,
 		payload: userId
 	});
+	//Get the signed in user info
 	const { userSignin: { userInfo }, } = getState();
 	try {
 		const { data } = await Axios.get(`/api/users/${userId}`, {

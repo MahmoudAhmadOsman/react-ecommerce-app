@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import currencyFormat from "../utils/util";
 import Rating from "./Rating";
 const Product = (props) => {
-	const productListTitle = "All Products";
-	const { products } = props;
-	return (
-		<section className="product-main-container mt-4">
+    const productListTitle = "All Products";
+    const { products } = props;
+    return (
+        <section className="product-main-container mt-4">
 			<div className="container">
 				<h1 className="text-danger">{productListTitle}</h1>
 				<hr />
@@ -54,6 +54,6 @@ const Product = (props) => {
 				</div>
 			</div>
 		</section>
-	);
+    );
 };
 export default Product;

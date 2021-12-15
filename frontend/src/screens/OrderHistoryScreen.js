@@ -68,12 +68,15 @@ const OrderHistoryScreen = (props) => {
 												<td>
 													<button
 														type="button"
-														className="btn btn-danger btn-sm"
+														className="btn btn-success btn-sm"
 														onClick={() => {
 															props.history.push(`/order/${order._id}`);
 														}}
 													>
-														Details
+														<i className="fa fa-eye" title="View details"></i>
+													</button>
+													<button className="btn btn-danger btn-sm ml-2">
+														<i className="fa fa-trash" title="Detlete"></i>
 													</button>
 												</td>
 											</tr>

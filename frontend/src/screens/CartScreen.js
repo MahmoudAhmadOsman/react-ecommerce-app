@@ -7,9 +7,10 @@ import MessageBox from "../components/MessageBox";
 import currencyFormat from "../utils/util";
 
 const CartScreen = (props) => {
-	//Read the cart id here
+	//Read, get, the cart id here
 	const productId = props.match.params.id;
 
+	//Check the quantity
 	const qty = props.location.search
 		? Number(props.location.search.split("=")[1])
 		: 1;

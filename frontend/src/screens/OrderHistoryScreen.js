@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { listOrderMine } from "../actions/orderActions";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
+import currencyFormat from "../utils/util";
 
 const OrderHistoryScreen = (props) => {
 	//Get the orders list from Redux store using useSelector
@@ -33,8 +34,8 @@ const OrderHistoryScreen = (props) => {
 									<thead class="thead-dark">
 										<tr>
 											<th>ORDER ID</th>
-											<th>DATE</th>
-											<th>TOTAL</th>
+											<th>ORDER DATE</th>
+											<th>TOTAL PRICE</th>
 											<th>PAID</th>
 											<th>DELIVERED</th>
 											<th>ACTIONS</th>
@@ -46,7 +47,7 @@ const OrderHistoryScreen = (props) => {
 												<td>{order._id}</td>
 
 												<td>{order.createdAt.substring(0, 10)}</td>
-												<td>{order.totalPrice.toFixed(2)}</td>
+												<td>${order.totalPrice.toFixed(2)}</td>
 												<td>
 													{order.isPaid ? (
 														order.paidAt.substring(0, 10)

@@ -28,10 +28,7 @@ export default function HomeScreen() {
 				<MessageBox variant="danger text-center mt-4">{error}</MessageBox>
 			) : (
 				<>
-					<Product products={products}></Product>{/*Pass products as props to the Product component  */}
-					{/* {products.map((product) => (
-            <Product key={product._id} product={product}></Product>
-          ))} */}
+					<Product products={products}></Product>
 				</>
 			)}
 		</div>

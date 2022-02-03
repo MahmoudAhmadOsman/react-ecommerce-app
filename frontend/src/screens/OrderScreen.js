@@ -27,7 +27,7 @@ const OrderScreen = (props) => {
 		//PayPal script function
 		const addPayPalScript = async () => {
 			const { data } = await Axios.get("/api/config/paypal");
-			//create script
+			//create paypal script
 			const script = document.createElement("script");
 			script.type = "text/javascript";
 			script.src = `https://www.paypal.com/sdk/js?client-id=${data}`;

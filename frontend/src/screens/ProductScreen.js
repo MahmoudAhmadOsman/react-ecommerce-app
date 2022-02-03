@@ -22,13 +22,8 @@ const ProductScreen = (props) => {
 
 	const productDetails = useSelector((state) => state.productDetails);
 	const { loading, error, product } = productDetails;
-	//If product doesn't exist
-	// if (!product) {
-	//   return <div className="product_not_found"> Product Not Found</div>;
-	// }
 
 	//lastly use useEffect()
-
 	useEffect(() => {
 		dispatch(detailsProduct(productId));
 	}, [dispatch, productId]);
@@ -166,5 +161,5 @@ const ProductScreen = (props) => {
 			)}
 		</section>
 	);
-};
+};;
 export default ProductScreen;

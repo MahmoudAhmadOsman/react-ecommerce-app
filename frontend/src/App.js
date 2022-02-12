@@ -72,7 +72,7 @@ const App = () => {
 										</Link>
 									</li>
 									<li>
-										<Link to="#signout" onClick={signoutHandler}>
+										<Link to="/signin" onClick={signoutHandler}>
 											<small> Sign Out</small>
 										</Link>
 									</li>

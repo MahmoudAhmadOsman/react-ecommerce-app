@@ -40,8 +40,12 @@ const Navigation = () => {
 						</li>
 					</ul>
 
-					<div className="d-flex d-block .d-sm-block">
-						<Link to="/cart" className="btn btn-outline-success">
+					<div className="d-flex mb-2">
+						<Link
+							to="/cart"
+							className="btn btn-outline-success mr-2 "
+							disabled={cartItems.length < 1}
+						>
 							<i className="fa fa-cart-plus" aria-hidden="true"></i>
 							{cartItems.length > 0 && (
 								<span class="badge badge-pill badge-danger shopping-cart">
@@ -84,10 +88,14 @@ const Navigation = () => {
 						) : (
 							<Link
 								to="/signin"
-								className="btn btn-outline-primary ml-2"
+								className="btn btn-outline-primary"
 								title="login"
 							>
-								Sign In
+								<i
+									className="fa fa-pencil"
+									aria-hidden="true"
+									title="Sign in"
+								></i>
 							</Link>
 						)}
 					</div>

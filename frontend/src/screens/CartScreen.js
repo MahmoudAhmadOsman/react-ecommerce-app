@@ -48,7 +48,7 @@ const CartScreen = (props) => {
 			<div className="container">
 				<div className="row">
 					<div class="col-md-12">
-						<Link to={`/product/${productId}`}>
+						<Link to="/">
 							<i
 								class="fa fa-chevron-left mt-3"
 								aria-hidden="true"

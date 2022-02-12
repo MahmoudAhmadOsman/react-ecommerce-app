@@ -25,9 +25,9 @@ body {
   height: 100%;
 } */
 
-header {
+.bg-dark {
 	/* grid-area: header; */
-	background-color: #203040;
+	background-color: #203040 !important;
 }
 
 /* Header */
@@ -133,6 +133,14 @@ a.brand {
 	color: #fff;
 	text-align: center;
 	margin-right: 8px;
+}
+.badge-danger.shopping-cart{
+	background-color: #f00 !important;
+	width:15px;
+	height:15px;
+	border-radius: 50%;
+	font-size: 9px;
+	top: -9px;
 }
 
 /* Login */

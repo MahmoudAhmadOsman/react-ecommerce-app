@@ -17,6 +17,7 @@ import OrderScreen from "./screens/OrderScreen";
 import NotFound from "./components/NotFound";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen";
 import ProfileScreen from "./screens/ProfileScreen";
+import Navigation from "./components/Navigation";
 
 const App = () => {
 	// Add cart badge - get it from redux by using useSelector which will bring the cart from redux
@@ -37,52 +38,8 @@ const App = () => {
 	return (
 		<BrowserRouter>
 			<section className="grid-container">
-				<header className="header-row">
-					<div>
-						<Link to="/" className="brand">
-							Amazon Clone
-						</Link>
-					</div>
-					<div>
-						{/* Items in the cart */}
-						<Link to="/cart">
-							Cart
-							{cartItems.length > 0 && (
-								<span className="badge bg-danger">{cartItems.length}</span>
-							)}
-						</Link>
-						{/* <Link to="/register">Register</Link> */}
-						{/* Conditional rendering for sign in */}
+				<Navigation />
 
-						{userInfo ? (
-							<div className="dropdown">
-								<Link to="#">
-									{userInfo.name}
-									<i className="fa fa-caret-down"></i>{" "}
-								</Link>
-								<ul className="dropdown-content">
-									<li>
-										<Link to="orderhistory">
-											<small>Order History</small>
-										</Link>
-									</li>
-									<li>
-										<Link to="/profile">
-											<small>User Profile</small>
-										</Link>
-									</li>
-									<li>
-										<Link to="/signin" onClick={signoutHandler}>
-											<small> Sign Out</small>
-										</Link>
-									</li>
-								</ul>
-							</div>
-						) : (
-							<Link to="/signin">Sign In</Link>
-						)}
-					</div>
-				</header>
 				<main>
 					{/* <Route path="/" component={HomeScreen} exact={true}></Route> */}
 					<Route path="/cart/:id?" component={CartScreen}></Route>
@@ -96,7 +53,7 @@ const App = () => {
 					<Route path="/orderhistory" component={OrderHistoryScreen}></Route>
 					<Route path="/profile" component={ProfileScreen}></Route>
 					<Route path="/" component={HomeScreen} exact={true}></Route>
-					{/* <Route path="*" component={NotFound}></Route> */}
+					{/* <Route path="*" exact={true} component={NotFound}></Route> */}
 				</main>
 				<Footer />
 			</section>

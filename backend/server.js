@@ -37,7 +37,6 @@ app.get("*", (req, res) =>
 
 // app.get("/", (req, res) => {
 // 	res.send("Server is running");
-
 // });
 //Show all errors - server errors
 app.use((err, req, res, next) => {

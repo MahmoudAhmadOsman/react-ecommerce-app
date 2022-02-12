@@ -40,7 +40,7 @@ const Navigation = () => {
 						</li>
 					</ul>
 
-					<div className="d-flex mb-2">
+					<div className="d-flex">
 						<Link
 							to="/cart"
 							className="btn btn-outline-success mr-2 "

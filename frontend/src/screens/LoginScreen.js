@@ -50,7 +50,7 @@ const Login = (props) => {
 						<div className="col-md-6 mx-auto">
 							<form action="#" method="POST" onSubmit={submitHandler}>
 								<div className="form-group">
-									<label htmlFor="email">Emaill Address</label>
+									<label htmlFor="email">Email Address</label>
 									<input
 										type="email"
 										className="form-control form-control-lg"

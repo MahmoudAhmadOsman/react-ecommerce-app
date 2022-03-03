@@ -36,7 +36,8 @@ const ProductScreen = (props) => {
 	return (
 		<section className="product-details-page">
 			{loading ? (
-				<LoadingBox></LoadingBox>
+				// <LoadingBox></LoadingBox>
+				<LoadingBox type={"spin"} color={"orange"} />
 			) : error ? (
 				<MessageBox variant="danger" className="text-center">
 					{error}

@@ -59,7 +59,8 @@ const OrderScreen = (props) => {
 	};
 
 	return loading ? (
-		<LoadingBox></LoadingBox>
+		// <LoadingBox></LoadingBox>
+		<LoadingBox type={"spin"} color={"orange"} />
 	) : error ? (
 		<MessageBox variant="danger text-center">{error}</MessageBox>
 	) : (
@@ -178,8 +179,7 @@ const OrderScreen = (props) => {
 									<strong className="text-danger">
 										${order.totalPrice.toFixed(2)}{" "}
 									</strong>
-										</h3>
-										
+								</h3>
 
 								{/* Show Paypal button by conditionally */}
 								{!order.isPaid && (

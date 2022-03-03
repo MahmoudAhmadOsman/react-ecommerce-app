@@ -141,7 +141,8 @@ const PlaceOrderScreen = (props) => {
 							>
 								Place Order{" "}
 							</button>
-							{loading && <LoadingBox></LoadingBox>}
+							{/* {loading && <LoadingBox></LoadingBox>} */}
+							{loading && <LoadingBox type={"spin"} color={"orange"} />}
 							{error && <MessageBox variant="danger">{error}</MessageBox>}
 						</ul>
 					</div>

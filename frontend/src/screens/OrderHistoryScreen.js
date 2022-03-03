@@ -25,7 +25,8 @@ const OrderHistoryScreen = (props) => {
 			<div className="container">
 				<h1 className="text-danger">Order History</h1> <hr />
 				{loading ? (
-					<LoadingBox></LoadingBox>
+					// <LoadingBox></LoadingBox>
+					<LoadingBox type={"spin"} color={"orange"} />
 				) : error ? (
 					<MessageBox variant="danger">{error}</MessageBox>
 				) : (

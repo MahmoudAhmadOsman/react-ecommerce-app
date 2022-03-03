@@ -40,7 +40,8 @@ const Login = (props) => {
 					<div className="row">
 						<div className="col-md-6 mx-auto">
 							<h1 className="text-danger">Login</h1> <hr />
-							{loading && <LoadingBox></LoadingBox>}
+							{/* {loading && <LoadingBox></LoadingBox>} */}
+							{loading && <LoadingBox type={"spin"} color={"orange"} />}
 							{error && <MessageBox variant="danger">{error}</MessageBox>}
 						</div>
 					</div>

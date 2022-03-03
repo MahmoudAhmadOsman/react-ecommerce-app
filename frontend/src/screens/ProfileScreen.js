@@ -22,17 +22,17 @@ const ProfileScreen = () => {
 	return (
 		<section className="user-profile">
 			<div className="container">
-				
-				
 				<div className="row">
 					<div className="col-md-3"></div>
 					<div className="col-md-6 mt-3">
 						<h1 className="text-danger mt-3">
-					<i className="fa fa-user-circle">&nbsp;</i>
-					User Profile
-				</h1>{" "}<hr />
+							<i className="fa fa-user-circle">&nbsp;</i>
+							User Profile
+						</h1>{" "}
+						<hr />
 						{loading ? (
-							<LoadingBox></LoadingBox>
+							// <LoadingBox></LoadingBox>
+							<LoadingBox type={"spin"} color={"orange"} />
 						) : error ? (
 							<MessageBox variant="danger">{error}</MessageBox>
 						) : (

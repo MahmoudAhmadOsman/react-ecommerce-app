@@ -17,7 +17,9 @@ export const productListReducer = (
   //Inside switch, check actions
   switch (action.type) {
     case PRODUCT_LIST_REQUEST:
-      return { loading: true }; // Return new state
+      return {
+				loading: true,
+			};  
     case PRODUCT_LIST_SUCCESS:
       return {
         loading: false,

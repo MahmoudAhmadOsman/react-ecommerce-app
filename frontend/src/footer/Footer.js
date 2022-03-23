@@ -16,7 +16,7 @@ export default function Footer() {
 								<h6 className="text-uppercase mb-4 font-weight-bold">
 									University of sms
 								</h6>
-								<p>This application is built with Angular framework.</p>
+								<p>This application is built with React library.</p>
 							</div>
 							<hr className="w-100 clearfix d-md-none" />
 							<div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">

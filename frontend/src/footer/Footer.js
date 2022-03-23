@@ -29,12 +29,12 @@ export default function Footer() {
 									</Link>
 								</p>
 								<p>
-									<Link to="/students" className="text-white">
-										Students
+									<Link to="/cart" className="text-white">
+										cart
 									</Link>
 								</p>
 								<p>
-									<Link to="/login" className="text-white">
+									<Link to="/signin" className="text-white">
 										Login
 									</Link>
 								</p>

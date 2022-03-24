@@ -62,34 +62,34 @@ export default function Footer() {
 								<h6 className="text-uppercase mb-4 font-weight-bold">
 									Follow me
 								</h6>
-								<a
+								<Link
 									className="btn btn-danger btn-floating m-1"
 									style={{ backgroundColor: "#3b5998 !important" }}
-									href="#!"
+									to="#!"
 									role="button"
 								>
 									<i className="fa fa-facebook-f" />
-								</a>
-								<a
+								</Link>
+								<Link
 									className="btn btn-danger btn-floating m-1"
 									style={{ backgroundColor: "#55acee !important;" }}
-									href="#!"
+									to="#!"
 									role="button"
 								>
 									<i className="fa fa-twitter" />
-								</a>
-								<a
+								</Link>
+								<Link
 									className="btn btn-danger btn-floating m-1"
 									style={{ backgroundColor: "#0082ca !important;" }}
-									href="https://www.linkedin.com/in/mahmoudaosman/"
+									to="https://www.linkedin.com/in/mahmoudaosman/"
 									role="button"
 								>
 									<i className="fa fa-linkedin-square" aria-hidden="true" />
-								</a>
+								</Link>
 								<Link
 									className="btn btn-danger btn-floating m-1"
 									style={{ backgroundColor: "#333333 !important;" }}
-									routerlink="https://github.com/MahmoudAhmadOsman"
+									to="https://github.com/MahmoudAhmadOsman"
 									role="button"
 								>
 									<i className="fa fa-github" />
@@ -103,7 +103,7 @@ export default function Footer() {
 					style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
 				>
 					© Copyright {currentYear.getFullYear()}. All rights reserved. &nbsp;
-					<a href="https://mahmoudosman.com/">mahmoudosman.com</a>
+					<Link to="https://mahmoudosman.com/">mahmoudosman.com</Link>
 				</div>
 			</footer>
 		</div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
 	const currentYear = new Date();
 	return (
-		<div className="footer my-5">
+		<div className="footer">
 			<footer
 				className="text-center text-lg-start text-white"
 				style={{ backgroundColor: "#323c53" }}
@@ -86,26 +86,24 @@ export default function Footer() {
 								>
 									<i className="fa fa-linkedin-square" aria-hidden="true" />
 								</a>
-								<a
+								<Link
 									className="btn btn-danger btn-floating m-1"
 									style={{ backgroundColor: "#333333 !important;" }}
 									routerlink="https://github.com/MahmoudAhmadOsman"
 									role="button"
 								>
 									<i className="fa fa-github" />
-								</a>
+								</Link>
 							</div>
 						</div>
 					</section>
 				</div>
 				<div
-					className="text-center p-3"
+					className="copy-right text-center p-3"
 					style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
 				>
 					© Copyright {currentYear.getFullYear()}. All rights reserved. &nbsp;
-					<a className="text-white" href="https://mahmoudosman.com/">
-						mahmoudosman.com
-					</a>
+					<a href="https://mahmoudosman.com/">mahmoudosman.com</a>
 				</div>
 			</footer>
 		</div>

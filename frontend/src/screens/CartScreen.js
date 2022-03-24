@@ -135,6 +135,7 @@ const CartScreen = (props) => {
 								Proceed to Checkout
 							</button>
 						</div>
+						<br /> <br /> <br />
 					</div>
 				)}
 			</div>

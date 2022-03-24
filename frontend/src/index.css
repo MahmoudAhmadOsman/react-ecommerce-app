@@ -116,6 +116,7 @@ a.brand {
 /* cart items */
 .cart-items {
 	position: relative;
+	margin-bottom: 60px !important;
 }
 
 /* .cart-items .shopping-bag {
@@ -366,15 +367,11 @@ ul.dropdown-content li {
 
 /* Footer Styles */
 .footer {
-	width: auto;
-	height: auto;
-	overflow: hidden;
-	left: 0;
-	right: 0;
-	position: absolute;
+	position: relative;
 	font-size: 14px;
+	margin-top: 45%;
 }
 
-footer p a {
+footer .copy-right a {
 	color: #f0c040;
 }

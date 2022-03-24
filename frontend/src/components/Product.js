@@ -13,7 +13,7 @@ const Product = (props) => {
 				<hr />
 				<div className="row">
 					{products.map((product) => (
-						<div className="col-md-4 mb-3" key={product._id}>
+						<div className="col-md-3 mb-3" key={product._id}>
 							<div className="card">
 								<Zoom>
 									<Link to={`/product/${product._id}`}>

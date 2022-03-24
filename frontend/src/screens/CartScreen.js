@@ -29,7 +29,7 @@ const CartScreen = (props) => {
 		}
 	}, [dispatch, productId, qty]);
 
-	//Cart item
+	//Cart items
 	//const cartItems = this.props;
 
 	//Remote Cart Items
@@ -61,9 +61,7 @@ const CartScreen = (props) => {
 
 			<div className="container mt-3">
 				<div className="shopping-bag">
-					{/* <i className="fa fa-shopping-cart"></i> */}
 					<h1 className="text-danger">Shopping Cart</h1>
-
 					<hr />
 				</div>
 				{cartItems.length === 0 ? (

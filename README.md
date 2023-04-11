@@ -1,8 +1,11 @@
-## MEARN stack ecommerce web application
+## MEARN Stack Ecommerce Application 
 Simple ecommerce application that is built with the following technologies.
- Backend technologies: Express js & Nodejs
-Database: MongoDB.
- Frontend: ReactJS, Reduxjs & Bootstrap.
+#### Backend technologies: 
+ - Express js & Nodejs
+#### Database: 
+ - MongoDB.
+ #### Frontend:
+ - ReactJS, Reduxjs & Bootstrap.
 ______________________________________________________________________________
 
 ### Cart Reducer Class

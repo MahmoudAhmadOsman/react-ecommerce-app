@@ -1,5 +1,5 @@
-## MEARN Stack Ecommerce Application 
-Simple ecommerce application that is built with the following technologies.
+## MEARN Stack eCommerce Application 
+This repository contains a React-based ecommerce application that allows users to browse and purchase products online. The app provides a user-friendly interface for customers to explore various products, add them to their shopping cart, and proceed to the checkout process.
 #### Backend Stack 
  - Expressjs & Nodejs
 #### Database: 
